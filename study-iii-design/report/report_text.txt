@@ -1,0 +1,386 @@
+XAUUSD | Study III Design Pack | 5 October 2026
+Pilot planning only | capacity gate fails | 2024+ holdout unopened
+1
+Study III
+Design Pack
+Coverage, power and a frozen confirmation specification
+Does current Asian realised variance add
+information about London realised variance
+beyond HAR?
+XAUUSD Research project | 5 October 2026
+Study II permanently frozen; 2024+ holdout unopened.
+Completed design work. Confirmation is not yet feasible.
+The audit verifies 2,922 OANDA source files and 2,789,384 complete paired M1 candles. Thirty-two randomly
+selected gap/control hours were rechecked using 192 successful provider requests. No sampled missing M1
+minute reappeared.
+The registered conservative planning scenario needs 32,001 scored forecasts for a 5% relative QLIKE-loss
+reduction at a 90% planning power target. Available pre-2024 unique weekday capacity is far smaller. These
+are pilot-based assumptions, not a universal minimum sample size.
+The confirmation specification is frozen, but its capacity condition fails. No new confirmation forecasts or
+trading translation have been run. No profitable strategy or 90% joint-gate power is claimed.
+Research and implementation assistance: Codex. Full audit ledgers, sample draws, code, source manifests and power sensitivities
+accompany this pack.
+
+
+XAUUSD | Study III Design Pack | 5 October 2026
+Pilot planning only | capacity gate fails | 2024+ holdout unopened
+2
+1. Why early-year eligibility is poor
+Year
+Weekday M1 received
+Asia M1 received
+Asia complete M5
+Asia valid dates
+2016
+91.3%
+96.5%
+89.4%
+91 / 261
+2017
+90.8%
+94.3%
+82.9%
+30 / 260
+2018
+91.8%
+96.7%
+90.5%
+79 / 261
+2019
+88.5%
+91.2%
+73.9%
+37 / 261
+2020
+92.2%
+97.6%
+94.6%
+173 / 262
+2021
+92.2%
+98.2%
+96.1%
+212 / 261
+2022
+92.9%
+98.9%
+98.0%
+235 / 260
+2023
+92.7%
+98.8%
+98.6%
+256 / 260
+The broad received-minute rate does not collapse: across UTC weekdays it ranges from 88.5% to 92.9%. The
+severe change is in Asian-session completeness and the resulting eligibility under fixed rules.
+In 2017 Asia receives 94.3% of wall-clock M1 slots and only 82.9% of complete M5 blocks; the thresholds are
+98% and 95%. In 2019 those rates are 91.2% and 73.9%. Even a scattered missing minute invalidates its
+entire M5 block. In 2023 the corresponding rates are 98.8% and 98.6%.
+Study II first-failure labels show 2017 Asia losing 201 dates to insufficient M1 and another 29 to incomplete M5.
+For 2019 the corresponding losses are 199 and 25. Independent availability diagnostics also count missing
+boundaries; a first-failure reason alone cannot describe all defects on a date.
+The calendar grid is a denominator for availability, not a trading-hours calendar. UTC weekdays include
+maintenance and holidays; weekends are shown separately. Unreceived minutes must not be labelled outages
+automatically.
+The 2017 report count is 30 forecast-eligible dates, 25 with valid London outcomes. Across 2016-2021: 580
+eligible feature dates, 560 labelled dates, 400 initial training observations and 160 scored forecasts. Those
+counts remain unchanged.
+
+
+XAUUSD | Study III Design Pack | 5 October 2026
+Pilot planning only | capacity gate fails | 2024+ holdout unopened
+3
+2. Monthly availability
+Source: immutable OANDA paired M1 responses, 2016-2023; UTC weekdays, including holiday/maintenance periods. Ratios pool all
+UTC hours. CSV tables include numerator and denominator counts.
+Four views use the same grid: received M1, unreceived M1, incomplete M5 blocks and absent UTC-hour edge
+minutes. The seasonal/date structure belongs to the received provider history; it is not inferred from a backtest
+outcome.
+Boundary minutes here mean minute 00 and minute 59 of each UTC hour. Separate daily ledgers explicitly test
+Asia 00:00/05:59 and London 08:00/11:59 in Europe/London, with historical DST.
+
+
+XAUUSD | Study III Design Pack | 5 October 2026
+Pilot planning only | capacity gate fails | 2024+ holdout unopened
+4
+3. Where in the UTC day gaps occur
+Source: OANDA 2016-2023 UTC weekdays. Asia is UTC00-06; London starts at UTC07 or UTC08 according to Europe/London DST.
+M5 completeness requires five received M1 candles.
+Early Asian hours are less complete than active daytime hours, with stronger missing-minute penalties after
+M5 aggregation. Concentrated missing hours can also reflect scheduled closures; this audit does not assign an
+outage cause from the heatmap alone.
+
+
+XAUUSD | Study III Design Pack | 5 October 2026
+Pilot planning only | capacity gate fails | 2024+ holdout unopened
+5
+4. Weekday and weekend structure
+Source: all 2,922 OANDA UTC calendar dates, 2016-2023. Saturday/Sunday are included to expose market-closure structure; missing
+wall-clock slots are not automatically erroneous data.
+Weekend and edge-of-week absences dominate some hours. Published tables provide both all-calendar and
+weekday-only versions by year, year/month, day of week and UTC hour. The eligibility policy still uses research
+weekdays and the frozen session windows.
+
+
+XAUUSD | Study III Design Pack | 5 October 2026
+Pilot planning only | capacity gate fails | 2024+ holdout unopened
+6
+5. Random provider rechecks
+Diagnostic
+Observed result
+Random sample
+24 missing hours + 8 complete controls; seed 20261005
+Request variants
+Whole-day M1 BA; hourly M1 BA/B/A/M; native hourly M5 BA
+Successful queries
+192 / 192 HTTP 200
+Sampled missing M1 minutes
+259
+Recovered missing M1 minutes
+0
+Repeated/split BA and side sets
+All 24 gap hours have identical received-minute sets
+Shared price changes
+0
+Complete controls
+All 8 repeat identically
+Native M5 versus complete-M1
+aggregation
+250 native M5 vs 202 complete reconstructed M5; 20/24 hours supply all 12 native M5
+candles
+The sample was frozen before requery. Sampling is uniform over candidate hour periods within year/session
+strata, not weighted over missing minutes. Three sampled hours have no received M1 at all and contribute 180
+of the 259 missing slots. This is a diagnostic sample, not an estimate of all historical gap incidence.
+The same gaps recur across full-day, narrower-hour and separate-side requests. The sampled gaps therefore
+do not look like an obvious failed bulk-download or BA-combination error. Their deeper cause remains
+unresolved: upstream omissions, no quote updates, retained-history policy or market closure need
+provider/tick evidence.
+Native M5 often exists where an M1-complete reconstruction fails. This supports investigating interval
+construction, but native M5 is not substituted into frozen Study II or Study III targets. Its return convention and
+economic comparability require a separately registered design.
+
+
+XAUUSD | Study III Design Pack | 5 October 2026
+Pilot planning only | capacity gate fails | 2024+ holdout unopened
+7
+6. Frozen power and precision method
+Pilot window
+N
+Mean HAR QLIKE
+Relative observed gain
+HAC20 LRV
+validation
+479
+0.1420
+20.0%
+1.584
+development_oos
+160
+0.1214
+20.6%
+0.640
+validation_2022
+228
+0.1313
+10.3%
+2.000
+validation_2023
+251
+0.1518
+27.5%
+0.946
+Already viewed Study II supplies nuisance calibration only. The primary series is HAR loss minus HAR+Asia
+loss, divided by that pilot window's mean HAR QLIKE. Its observed mean is removed before resampling. No
+pilot observation counts as new confirmation evidence.
+Primary planning alternative: 5% relative QLIKE-loss reduction; sensitivity alternatives: 1%, 3%, 8% and 10%.
+Power targets: 80% and 90%; primary 90%. One-sided alpha is 0.025. The 5% target is operationally material
+for this research, but has no established conversion to trading dollars.
+Estimate long-run variance with Bartlett-HAC lags 0/5/10/20/60 and circular-block-sum variance at blocks
+5/10/20. For each pilot window/block pair, draw 2,000 circular resamples and take the 95th percentile of
+max(HAC5,HAC10,HAC20).
+The largest upper estimate is 5.076, from validation_2022, block 20. The prespecified 1.5 variance-transport
+stress gives planning Omega = 7.614. It is a conservative design assumption, not a measured provider effect.
+N = ceil[(z(0.975) + z(power))^2 x Omega / effect^2]
+This is scored forecast count, excluding training. Normal 95% relative-effect half-width is 1.96 x
+sqrt(Omega/N).
+Planning source/config were committed before the calculation. Pilot selection, serial nonstationarity and
+nested-model estimation limit transport of this normal approximation. Power applies to the positive-mean
+criterion, not the intersection of every acceptance gate.
+
+
+XAUUSD | Study III Design Pack | 5 October 2026
+Pilot planning only | capacity gate fails | 2024+ holdout unopened
+8
+7. Sample requirements and sensitivity
+Assumed relative effect
+80% planning power
+90% planning power
+1%
+597,604
+800,021
+3%
+66,401
+88,892
+5%
+23,905
+32,001
+8%
+9,338
+12,501
+10%
+5,977
+8,001
+Primary requirement: 32,001 scored forecasts. At that N, normal 95% half-width is 3.02 percentage points on
+the fixed pilot-relative scale.
+Less conservative validation-only assumption
+Required N at 5% / 90%
+iid 0
+5,510
+Bartlett-HAC 5
+5,781
+Bartlett-HAC 10
+6,431
+Bartlett-HAC 20
+6,659
+Bartlett-HAC 60
+8,549
+The primary requirement is deliberately larger than validation-only point estimates because it includes
+nuisance-estimation uncertainty, worse pilot-year noise and the frozen transport stress. The sensitivity table
+demonstrates that N depends strongly on effect and dependence assumptions; 32,001 is not a finance
+constant.
+At 250 usable forecasts per year, the primary requirement corresponds to about 128 years; 200/year requires
+about 160 years. These are capacity scenarios, not an assertion that such history exists. Every scored date is
+one session outcome; multiple brokers on the same dates do not create independent market histories.
+
+
+XAUUSD | Study III Design Pack | 5 October 2026
+Pilot planning only | capacity gate fails | 2024+ holdout unopened
+9
+8. Calibration and acquisition feasibility
+Target / N
+Block
+Conditional simulated power
+MC standard error
+80% / 23,905
+5
+97.97%
+0.100 pp
+80% / 23,905
+10
+97.27%
+0.115 pp
+80% / 23,905
+20
+96.99%
+0.121 pp
+90% / 32,001
+5
+99.91%
+0.021 pp
+90% / 32,001
+10
+99.86%
+0.027 pp
+90% / 32,001
+20
+99.83%
+0.029 pp
+Each row uses 20,000 centred pilot circular-block draws plus an assumed 5% location shift. Rejection uses the
+conservative known planning variance. Higher simulated rejection rates reflect the smaller noise of the pooled
+validation pilot relative to the stressed design variance.
+These are simulated forecast-loss planning samples, not invented market prices or trading profits. They do not
+refit the nested models, establish real future power or estimate the probability that all acceptance gates pass.
+Capacity upper bound
+Unique scored dates
+Primary untouched-time window: 1999-2015
+At most 4,035 after 400 training dates
+Even all 1999-2023, including previously viewed years
+At most 6,121 after training
+Frozen conservative requirement
+32,001
+These are generous weekday-calendar ceilings at 100% coverage, not authenticated provider-history claims.
+They already fall below the requirement. A better pre-2024 feed alone cannot make this particular powered
+design feasible.
+The capacity gate therefore stops bulk acquisition and confirmation evaluation. No threshold or effect
+assumption is lowered to turn the design green. A different precision objective or prospective design would
+require a separate, explicit registration; the holdout is not a capacity remedy.
+
+
+XAUUSD | Study III Design Pack | 5 October 2026
+Pilot planning only | capacity gate fails | 2024+ holdout unopened
+10
+9. Frozen HAR confirmation specification
+Item
+Registered specification
+Primary / secondary
+HAR vs HAR+Asia primary; basic vs basic+Asia secondary
+Target
+Unannualised London midpoint M5 realised variance
+HAR regressors
+Log prior London variance, prior UTC-day variance, prior 5- and 20-session mean London
+variance
+Added feature
+Log current Asian realised variance; no directional or regime search
+Clocks
+Tokyo 09:00-15:00; London 08:00-12:00 Europe/London, historical DST
+Fresh time / source
+New independent provider, actual available dates within 1999-2015
+Training / confirmation
+First 400 eligible labelled dates train once; freeze coefficients/smearing; score subsequent
+dates
+Secondary provider replication
+2016-2023 on new source, reported separately; not pooled into fresh-period N
+Quality rules
+Study II M1/M5 completeness, gap, boundary and quote flags unchanged; no inserted prices
+Acceptance requires the power-derived unique sample count; direct independent source provenance; at least
+95% qualifying outcomes among issued forecasts; positive frozen-training Asia coefficient; positive mean
+primary QLIKE advantage with lower 95% paired block bounds above zero for blocks 5/10/20; positive
+advantage in each full scored year; and no more than 5% MSE/MAE deterioration.
+Forecasts are issued from origin-time eligibility regardless of future label quality. Preserve missing positions in
+blocks and disclose selection/missingness. Report annual and cumulative loss differences, relative effect
+intervals and both model pairs. Secondary comparisons cannot rescue a failed primary.
+Inference concerns fixed forecast algorithms conditional on initial training. Conventional DM remains
+descriptive; Clark-West on nested linear log-MSPE is secondary and never applied mechanically to QLIKE.
+Passing a positive-effect gate does not prove improvement exceeds the 5% planning alternative.
+
+
+XAUUSD | Study III Design Pack | 5 October 2026
+Pilot planning only | capacity gate fails | 2024+ holdout unopened
+11
+10. Source plan, holdout and permanent
+records
+Source route
+Verified state
+legacy_candle
+HTTP 429; no price outcome evaluated
+provider_json
+HTTP 429; no price outcome evaluated
+Dukascopy documented S3
+Requester-pays route requires AWS credentials/budget; not used
+JForex/provider broker export
+Authenticated export is a possible route; access/history not yet verified
+OANDA / archive mirror
+OANDA is the pilot; an archive mirror is not independent confirmation
+Priority: direct Dukascopy paired M1 or ordered ticks, then authenticated provider export. A different broker
+would need documented upstream independence, symbol identity, paired quotes, timestamps, coverage and a
+source amendment before outcome evaluation. No second authenticated independent feed has been acquired.
+Two dated direct-provider access probes returned 429; no retry loop or alternative mirror is counted as
+provider replication. The documented S3 route is requester-pays and requires credentials. It was not used, and
+no paid account or broker login was created.
+All 2024-2026 data stays locked. Current code rejects windows crossing 1 January 2024. New York is
+secondary context, with no entry signal. C++ and MT5 EA implementation remain deferred.
+The exact Study II trading candidate is carried unchanged in confirmation.json: Asian RV strictly above the
+trailing 60-session 80th percentile, first London Asian-boundary break 08:00-10:00, opposite-edge stop, noon
+exit, at most one trade. All original cost, sizing, tick and acceptance rules remain. It runs once only after
+confirmation passes; it is currently unrun.
+If the rule eventually fails, retain a passing volatility forecast as research. Volatility-instrument monetisation or
+risk/execution use is a new registered study, not a redesigned spot backtest.
+Study II permanent tag: study-ii-permanent-freeze-2026-10-05. Source commit: 214b50ff13c5. Archived report/bundle hashes and 51
+research-file checksums remain unchanged. Planning commit ebf954e precedes power calculation; confirmation registration commit
+72d2b2e precedes new-provider probes.
+References
+OANDA candle schema: developer.oanda.com/rest-live-v20/instrument-df
+Dukascopy export guide: dukascopy.com/wiki/en/development/data-export
+Newey-West HAC: NBER technical paper 0055
+Clark-West nested tests: Kansas City Fed working paper 05-05
+Patton QLIKE/proxy comparison: Patton (2011)

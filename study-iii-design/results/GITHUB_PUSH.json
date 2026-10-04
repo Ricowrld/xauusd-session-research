@@ -1,0 +1,10 @@
+{
+  "repository_url": "https://github.com/Ricowrld/xauusd-session-research",
+  "branch": "main",
+  "commit": "35a24eceaaf5522ff34fc678779f8c9b175c907a",
+  "files_scanned": 369,
+  "credential_scan": "passed",
+  "raw_provider_responses_published": false,
+  "holdout_accessed": false,
+  "remote_commit_verified": true
+}

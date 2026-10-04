@@ -1,0 +1,11 @@
+{
+  "pdf": "Study_III_Design_Pack.pdf",
+  "pdf_sha256": "8545d1a40427546a402b95daca347a8808f273c6375381ea3ea5d93f28e365d2",
+  "bundle": "Study_III_Design_Pack_Bundle.zip",
+  "bundle_sha256": "e4111d785e68560cc78cf5c7750505b1d68eaefea5fbb0641374fe9f9d44b285",
+  "bundle_files": 67,
+  "source_commit": "189466487213d893f9d67d181c029ffbe7bf1a93",
+  "tests_passed": 6,
+  "holdout_accessed": false,
+  "new_confirmation_evaluated": false
+}

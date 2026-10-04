@@ -31,7 +31,10 @@ def main():
     sums={}
     for name,path in files.items():
         destination=target/name;destination.parent.mkdir(parents=True,exist_ok=True)
-        shutil.copy2(path,destination);sums[name]=sha(path.read_bytes())
+        checksum=sha(path.read_bytes())
+        if not destination.exists() or sha(destination.read_bytes())!=checksum:
+            shutil.copy2(path,destination)
+        sums[name]=checksum
     readme='''# Cross-session information transfer in XAUUSD
 
 Research question: Does current Asian-session realised variance add information
@@ -62,8 +65,8 @@ about subsequent London realised variance beyond a HAR-style volatility baseline
 `portfolio-edition/README.md` gives the public Study I/II narrative.
 `output/pdf/Gold_Session_Study_II_OANDA_Research_Report.pdf` is the frozen Study II report.
 `study-iii-design/` contains the coverage investigation, power calculations and
-registered confirmation specification. Its PDF Design Pack is in preparation
-unless present in `output/pdf/`; consult its README for completed deliverables.
+registered confirmation specification. The completed 11-page Design Pack is
+`output/pdf/Study_III_Design_Pack.pdf`; its companion evidence bundle is in `output/`.
 `research-archive/Gold-Session-Study-II/PERMANENT_FREEZE.json` records the immutable
 report/bundle and research-file hashes. A separate timestamp-gap correction to
 Study I is documented without rewriting its historical report.
@@ -82,9 +85,9 @@ not a live trading system or a claim of investment profitability.
 '''
     (target/'README.md').write_text(readme,encoding='utf-8')
     (target/'.gitignore').write_text('**/__pycache__/\n**/.env*\n**/*.token\n**/*.parquet\n**/data/raw/\n**/data/independent/\n**/data/LOCKED_HOLDOUT/\n',encoding='utf-8')
-    (target/'.gitattributes').write_text('* text=auto eol=lf\n*.png binary\n*.pdf binary\n*.zip binary\n',encoding='utf-8')
+    (target/'.gitattributes').write_text('* -text\n*.png binary\n*.pdf binary\n*.zip binary\n',encoding='utf-8')
     write(target/'PROGRESS_MANIFEST.json',{'client_date':'2026-10-05','source_commits':commits,
-        'publication_type':'Progress snapshot; Study III design pack may still be in preparation',
+        'publication_type':'Completed Study III Design Pack; confirmation capacity gate not met',
         'raw_provider_data_included':False,'holdout_accessed':False,'files_sha256':sums})
     print('Publication snapshot prepared:',len(files),'research/output files; raw data excluded.')
 

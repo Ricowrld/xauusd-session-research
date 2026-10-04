@@ -28,8 +28,8 @@ about subsequent London realised variance beyond a HAR-style volatility baseline
 `portfolio-edition/README.md` gives the public Study I/II narrative.
 `output/pdf/Gold_Session_Study_II_OANDA_Research_Report.pdf` is the frozen Study II report.
 `study-iii-design/` contains the coverage investigation, power calculations and
-registered confirmation specification. Its PDF Design Pack is in preparation
-unless present in `output/pdf/`; consult its README for completed deliverables.
+registered confirmation specification. The completed 11-page Design Pack is
+`output/pdf/Study_III_Design_Pack.pdf`; its companion evidence bundle is in `output/`.
 `research-archive/Gold-Session-Study-II/PERMANENT_FREEZE.json` records the immutable
 report/bundle and research-file hashes. A separate timestamp-gap correction to
 Study I is documented without rewriting its historical report.
