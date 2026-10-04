@@ -1,0 +1,12 @@
+{
+  "primary_wallclock_weekdays_upper_bound": 4435,
+  "primary_maximum_after_400_training": 4035,
+  "all_pre_2024_1999_2023_weekdays_upper_bound": 6521,
+  "all_history_maximum_after_400_training": 6121,
+  "required_scored_forecasts": 32001,
+  "primary_design_feasible_even_at_100pct_coverage": false,
+  "all_window_feasible_even_at_100pct_coverage": false,
+  "note": "Generous calendar upper bounds, not evidence of provider data availability. Weekday holidays/quality losses reduce capacity.",
+  "fresh_confirmation_outcomes_evaluated": false,
+  "holdout_accessed": false
+}

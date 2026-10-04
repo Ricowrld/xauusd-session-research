@@ -1,0 +1,37 @@
+{
+  "registration": "PREREGISTRATION.md",
+  "dataset_version": "922f83a60cc574e7395fb27397077288055a1ef6",
+  "config_version": "gold-coil-v1",
+  "cost_assumptions": "Not applicable to statistical effect",
+  "results": {
+    "experiment_id": "EXP001",
+    "split": "validation",
+    "N": 495,
+    "beta": 0.3221870803123025,
+    "se": 0.052045657915752004,
+    "t": 6.190469929957215,
+    "p": 5.998511061422457e-10,
+    "ci_low": 0.22017946524573656,
+    "ci_high": 0.4241946953788684,
+    "r2": 0.1336304732937872,
+    "target": "logC",
+    "outcome": "Y_range",
+    "bootstrap_ci_low": 0.21598909757513501,
+    "bootstrap_ci_high": 0.4179651650964838,
+    "mean": 0.008487726843802964,
+    "median": -0.03106420099192393,
+    "std": 0.42413315882636965,
+    "skew": 0.6473723644561744,
+    "kurtosis_excess": 0.8743048558612352,
+    "pearson": 0.3317704316601066,
+    "spearman": 0.26052661260640886,
+    "q": 4.19895774299572e-09
+  },
+  "decision": "REJECT expected direction",
+  "known_weaknesses": [
+    "Third-party feed not authenticated",
+    "M1 closure padding excluded by flat-candle rule",
+    "News not controlled"
+  ],
+  "next_allowed_action": "Authenticate source and register future research; holdout reserved"
+}

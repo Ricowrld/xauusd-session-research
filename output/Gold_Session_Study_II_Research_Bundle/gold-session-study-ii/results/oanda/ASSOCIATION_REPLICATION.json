@@ -1,0 +1,62 @@
+[
+  {
+    "split": "development",
+    "model": "unconditional_log_variance",
+    "N": 595,
+    "beta_asia": 0.5974336433890849,
+    "ci_low": 0.4943562796511211,
+    "ci_high": 0.7005110071270487,
+    "p": 6.622127855924792e-30,
+    "interpretation": "association, not causality or trading profit"
+  },
+  {
+    "split": "development",
+    "model": "enhanced",
+    "N": 560,
+    "beta_asia": 0.36478930141886584,
+    "ci_low": 0.2824741285645659,
+    "ci_high": 0.4471044742731658,
+    "p": 3.760553776781951e-18,
+    "interpretation": "conditional association diagnostic; validation coefficients never used for validation forecasts"
+  },
+  {
+    "split": "development",
+    "model": "har_enhanced",
+    "N": 560,
+    "beta_asia": 0.34806225054876755,
+    "ci_low": 0.2638379726887005,
+    "ci_high": 0.4322865284088346,
+    "p": 5.510514079596636e-16,
+    "interpretation": "conditional association diagnostic; validation coefficients never used for validation forecasts"
+  },
+  {
+    "split": "validation",
+    "model": "unconditional_log_variance",
+    "N": 491,
+    "beta_asia": 0.7819955061928728,
+    "ci_low": 0.6815507522272378,
+    "ci_high": 0.8824402601585078,
+    "p": 1.4350555856968702e-52,
+    "interpretation": "association, not causality or trading profit"
+  },
+  {
+    "split": "validation",
+    "model": "enhanced",
+    "N": 479,
+    "beta_asia": 0.49198937878176335,
+    "ci_low": 0.4029846072923363,
+    "ci_high": 0.5809941502711904,
+    "p": 2.3743668649027165e-27,
+    "interpretation": "conditional association diagnostic; validation coefficients never used for validation forecasts"
+  },
+  {
+    "split": "validation",
+    "model": "har_enhanced",
+    "N": 479,
+    "beta_asia": 0.4215575619175481,
+    "ci_low": 0.3353632139561698,
+    "ci_high": 0.5077519098789265,
+    "p": 9.178658211425485e-22,
+    "interpretation": "conditional association diagnostic; validation coefficients never used for validation forecasts"
+  }
+]

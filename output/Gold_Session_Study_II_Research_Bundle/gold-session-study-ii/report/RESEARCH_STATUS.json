@@ -1,0 +1,19 @@
+{
+  "as_of_client_date": "2026-10-04",
+  "title": "Gold Session Study II - Cross-Session Volatility Persistence",
+  "primary_data": "Direct provider-delivered OANDA XAU_USD M1 paired bid/ask",
+  "primary_source_files": 2922,
+  "primary_complete_candles": 2789384,
+  "authenticated_second_feed": "Not acquired; prior archive claims Dukascopy origin without authenticated delivery",
+  "direct_exp001_reproduction": "Positive coefficients and HAC intervals above zero in both splits on OANDA",
+  "forecast_results": "Validation QLIKE improves 23.851% basic and 19.953% HAR baseline; development sample minimum not met",
+  "development_oos_forecasts": 160,
+  "required_development_oos_forecasts": 500,
+  "validation_forecasts": 479,
+  "forecast_gate_pass": false,
+  "conditional_trading_test": "Not run because forecast gate not met",
+  "profitable_strategy_found": false,
+  "holdout_accessed": false,
+  "implementation_checks_passed": 14,
+  "study_i_timestamp_erratum": "EXP001 and early trade-R ledgers unchanged; corrected noon ledgers remove two development trades and one validation trade; frozen artefacts preserved"
+}

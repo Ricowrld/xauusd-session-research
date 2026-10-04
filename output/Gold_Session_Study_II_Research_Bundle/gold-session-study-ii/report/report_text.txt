@@ -1,0 +1,553 @@
+Gold Session Study II | provider-delivered OANDA data | 4 October 2026
+2016-2023 analysed | sample-size gate not met | 2024+ holdout unopened
+1
+Cross-session volatility
+persistence in XAUUSD
+Gold Session Study II
+Does Asia add information about London?
+Direct OANDA bid/ask data | 2016-2023
+Preregistered forecast comparison and independent-feed replication
+Promising forecast improvement. Registered sample-size gate not met.
+Adding Asian realised variance reduces validation QLIKE loss by 23.9% against the basic baseline and
+20.0% against a stronger volatility-history baseline.
+Only 160 development forecasts are available after the fixed training and data-quality rules, below the
+required 500. The conditional trading candidate was not run. The 2024+ holdout remains unopened.
+XAUUSD Research project
+Research and implementation assistance: Codex
+4 October 2026 | gold-volatility-persistence-v1
+Provider-delivered historical candles and hypothetical statistical forecasts. No live trades, profitable strategy, MT5 real-tick validation or
+COMEX replication are represented.
+
+
+Gold Session Study II | provider-delivered OANDA data | 4 October 2026
+2016-2023 analysed | sample-size gate not met | 2024+ holdout unopened
+2
+1. The result and the decision
+A statistical lead survives; the acceptance gate does not.
+Question
+Actual result
+Independent range-result replication
+OANDA EXP001 coefficients are positive in development and validation; both HAC
+intervals exclude zero.
+Asian RV -> London RV
+Positive log-variance associations, including controls for prior London and daily
+variance.
+Incremental validation forecasts
+QLIKE improvement: basic 23.9%; stronger baseline 20.0%. MSE and MAE also
+improve.
+Development adequacy
+560 training observations through 2021; only 160 expanding-fit OOS forecasts,
+versus required 500.
+Trading / final period
+Not tested. Statistical acceptance is inconclusive under the fixed sample-size gate.
+Holdout remains locked.
+The conclusion is not that the Asian feature contains no information. The observed forecast comparisons are
+favorable. The registered protocol requires more development forecasts before acceptance, and its
+requirement cannot be reduced after looking at validation.
+The 23.9% loss reduction is not a trading return or profit percentage. Predicting volatility does not predict the
+first breakout side or guarantee post-entry travel.
+
+
+Gold Session Study II | provider-delivered OANDA data | 4 October 2026
+2016-2023 analysed | sample-size gate not met | 2024+ holdout unopened
+3
+2. Source provenance and acquisition
+Source item
+Observed record
+Provider / instrument
+OANDA v20 practice HTTPS API / XAU_USD
+Resolution / price sides
+Complete M1 candles, paired bid and ask; unsmoothed request
+Requested history
+1 January 2016 to 31 December 2023
+Calendar response files
+2,922; 439 contain no complete candles
+Complete observations
+2,789,384; incomplete observations 0
+Raw response bytes
+575,313,674, unchanged and SHA-256 verified
+Quote audit
+Invalid rows 0; flagged rows 4,893; genuine received both-side-flat bars retained
+27,830
+The API token was supplied through the local user environment. Only historical-candle GET requests were
+used. Source manifests contain public request URLs, UTC retrieval times, byte counts and hashes; they
+contain no token or account identifier.
+OANDA is the authenticated acquisition source for this study. It is a new broker feed relative to Study I's
+archive claiming Dukascopy origin. Direct Dukascopy authentication is still absent, so this is not two
+authenticated-provider replication.
+Checksums establish the files used; provider HTTPS delivery establishes acquisition provenance. Neither
+guarantees that every historical quote is accurate or that historical venue pricing cannot be revised. Quote
+counts are provider price-update counts, not central gold trading volume.
+
+
+Gold Session Study II | provider-delivered OANDA data | 4 October 2026
+2016-2023 analysed | sample-size gate not met | 2024+ holdout unopened
+4
+3. Coverage is the binding limitation
+Year
+Weekdays
+Asia valid
+London valid
+Daily valid
+Forecast eligible
+2016
+261
+91
+194
+183
+87
+2017
+260
+30
+134
+163
+30
+2018
+261
+79
+206
+203
+78
+2019
+261
+37
+132
+94
+36
+2020
+262
+173
+222
+146
+141
+2021
+261
+212
+257
+211
+208
+2022
+260
+235
+257
+214
+228
+2023
+260
+256
+257
+215
+251
+Source: OANDA 2016-2023; frozen M1/M5 completeness, boundary, gap and quote-quality rules. These are eligible data samples, not
+trading success rates.
+A received minute is not automatically a valid M5 return block. Earlier years lose many sessions to missing
+M1 observations or insufficient complete M5 blocks. No missing price is interpolated. This creates a selected
+sample and limits generalisation, especially to quieter historical conditions.
+Development supplies 560 eligible labelled training rows. The first 400 are used before the first development
+forecast on 11 March 2021; only the remaining 160 can be evaluated out of sample. Nominal development
+OOS dates were 2018-2021, but actual scored forecasts cover 11 March-17 December 2021.
+
+
+Gold Session Study II | provider-delivered OANDA data | 4 October 2026
+2016-2023 analysed | sample-size gate not met | 2024+ holdout unopened
+5
+4. Clocks, cleaning and causal labels
+Window
+Frozen local clock
+Asia
+09:00-15:00 Asia/Tokyo; UTC 00:00-06:00
+London
+08:00-12:00 Europe/London, historical DST
+Daily control
+Prior completed UTC weekday 00:00-24:00
+New York
+Secondary context only; no entry feature
+All windows are half-open. Asia/London require 98% received M1 rows, both boundary minutes, maximum
+gap five minutes and no flagged quote; also 95% complete M5 blocks. The daily control uses 90% M1, 85%
+complete M5 and maximum gap 90 minutes.
+Flag endpoint spread above $5/oz and adjacent-minute midpoint jumps above 2%; reject invalid OHLC,
+nonfinite/nonpositive prices and nonpositive spreads. Genuine received flat candles are retained, with no
+interpolation or synthetic padding. Time gaps are measured as timedeltas; provider indices explicitly use
+nanoseconds.
+Window
+Invalid-date reasons
+asia
+insufficient_minutes: 717, insufficient_complete_m5: 230, flag_or_gap: 24, missing_boundary: 2
+london
+insufficient_minutes: 274, insufficient_complete_m5: 122, flag_or_gap: 27, missing_boundary: 4
+daily
+insufficient_minutes: 468, insufficient_complete_m5: 122, flag_or_gap: 67
+Every forecast-origin eligible date stays in the forecast ledger even if its London target is subsequently
+missing. This run has zero missing targets among issued forecasts, but many input-ineligible dates. That
+does not establish unbiased coverage of all market regimes.
+
+
+Gold Session Study II | provider-delivered OANDA data | 4 October 2026
+2016-2023 analysed | sample-size gate not met | 2024+ holdout unopened
+6
+5. Reproducing Study I EXP001
+Policy / split
+N
+EXP001 beta
+95% HAC interval
+flat exclusion / development
+631
++0.273
+[+0.178, +0.369]
+flat exclusion / validation
+464
++0.255
+[+0.161, +0.349]
+flat retained / development
+786
++0.269
+[+0.182, +0.355]
+flat retained / validation
+483
++0.308
+[+0.204, +0.412]
+EXP001 regresses log London percentage range normalised by its prior-20 median on log Asian
+dollar-range compression, with lagged Asian percentage-range baseline and prior absolute Asian return as
+controls. Each split resets rolling history, matching Study I.
+The original prediction required a negative compression coefficient: quiet Asia followed by larger London
+ranges. OANDA reproduces a positive coefficient, supporting persistence rather than the registered
+expansion direction. This is range association, distinct from the variance forecast target in Study II.
+The flat-exclusion diagnostic follows Study I's original received-bar deletion policy. The flat-retained version
+is the predeclared cleaning sensitivity. A separately labelled legacy millisecond-index run is saved; corrected
+and legacy gap screens give the same EXP001 estimates on these qualifying samples.
+Shared-timestamp price differences with the archived feed are recorded separately. Different venues need
+not quote identical gold prices. Those differences do not authenticate the original archive or invalidate a
+reproduced statistical sign.
+Replication supports the volatility research lead. It does not certify a compression-breakout strategy or
+replace a final unseen confirmation period.
+
+
+Gold Session Study II | provider-delivered OANDA data | 4 October 2026
+2016-2023 analysed | sample-size gate not met | 2024+ holdout unopened
+7
+6. Does the RV association replicate?
+Period / model
+N
+Asian log-variance beta
+95% HAC interval
+development / simple
+595
++0.597
+[+0.494, +0.701]
+development / enhanced
+560
++0.365
+[+0.282, +0.447]
+development / HAR + Asia
+560
++0.348
+[+0.264, +0.432]
+validation / simple
+491
++0.782
+[+0.682, +0.882]
+validation / enhanced
+479
++0.492
+[+0.403, +0.581]
+validation / HAR + Asia
+479
++0.422
+[+0.335, +0.508]
+The simple association regresses log London realised variance on log current Asian realised variance. Both
+periods have a positive Asian coefficient and HAC interval above zero. The controlled models also retain a
+positive coefficient.
+Realised variance is an unannualised sum of squared complete-M5 midpoint log returns. The first complete
+block uses its open-to-close return; subsequent close-to-close returns require adjacent blocks. Cross-gap
+returns are omitted. RV is its square root. No high/low-average midpoint extrema are invented.
+Conditional validation regressions are association diagnostics only: their fitted coefficients never generate
+validation forecasts. Forecast coefficients and smearing stay fixed at their 2016-2021 estimates.
+All intervals are conditional on the selected, observed sample and model assumptions. HAC allows specified
+short residual dependence; it does not establish causality, source independence, unbiased missingness or
+invariance across venues.
+
+
+Gold Session Study II | provider-delivered OANDA data | 4 October 2026
+2016-2023 analysed | sample-size gate not met | 2024+ holdout unopened
+8
+7. Registered forecast design
+Model
+Predictors, plus intercept
+Basic baseline
+log prior London variance; log prior daily variance
+Basic + Asia
+Basic baseline plus log current Asian variance
+HAR-style baseline
+Basic baseline plus logs of prior five- and twenty-session mean London variance
+HAR + Asia
+HAR-style baseline plus log current Asian variance
+Target: log London realised variance. All four models use the same eligible dates and twenty-session history
+requirement. Prior controls use observations strictly before the forecast date, with at most four calendar days
+of staleness for prior London/daily variance.
+Fit OLS with intercept. Convert the log prediction to variance by exponentiation times mean(exp(training
+residual)); no validation residual enters this smearing adjustment. The fixed numeric forecast floor is 1e-12.
+Realised targets are never clipped.
+Development: expanding daily fits, minimum 400 prior eligible labelled observations. Validation: freeze
+coefficients and smearing at end-2021; only lagged features update causally. Were all gates met,
+final-period coefficients would be refitted once through 2023 and frozen before any holdout access.
+The protocol predates forecast evaluation. Source-role and timestamp-correction amendments are
+documented separately and changed no model, loss threshold, percentile, stop, session hour or acceptance
+sample size.
+
+
+Gold Session Study II | provider-delivered OANDA data | 4 October 2026
+2016-2023 analysed | sample-size gate not met | 2024+ holdout unopened
+9
+8. Development out-of-sample results
+Pair / metric
+Baseline mean loss
+Asia mean loss
+Reduction
+Basic / MSE
+3.68e-11
+2.73e-11
+26.0%
+Basic / MAE
+4.63e-06
+3.55e-06
+23.2%
+Basic / QLIKE
+0.140
+0.108
+22.7%
+HAR / MSE
+3.03e-11
+2.45e-11
+19.1%
+HAR / MAE
+4.18e-06
+3.3e-06
+20.9%
+HAR / QLIKE
+0.121
+0.096
+20.6%
+Scored period: 11 March-17 December 2021, 160 forecasts and 160 observed targets. Expanding estimation
+uses earlier completed sessions only. The nominal 2018-2021 test window produces no score before the
+400-observation training minimum is reached.
+Both forecast pairs reduce all three mean losses in this available sample. This is evidence about 160
+observed forecast dates, not the required 500 and not four fully evaluated development years.
+MSE = mean((realised variance - forecast variance)^2); MAE = mean absolute variance error. QLIKE = y/f -
+ln(y/f) - 1 for positive variance y and forecast f. Lower is better. Percentage reduction compares each
+enhanced model only with its corresponding baseline.
+The training-window and completeness criteria remain unchanged. Lowering minimum training rows,
+relaxing received-bar rules or adding older history after seeing validation would be a new design requiring
+explicit disclosure and a clean evaluation plan.
+
+
+Gold Session Study II | provider-delivered OANDA data | 4 October 2026
+2016-2023 analysed | sample-size gate not met | 2024+ holdout unopened
+10
+9. Validation forecast losses
+Pair / metric
+Baseline mean loss
+Asia mean loss
+Reduction
+Basic / MSE
+6.62e-11
+5.97e-11
+9.8%
+Basic / MAE
+5.18e-06
+4.34e-06
+16.2%
+Basic / QLIKE
+0.162
+0.123
+23.9%
+HAR / MSE
+6.26e-11
+5.82e-11
+7.0%
+HAR / MAE
+4.87e-06
+4.18e-06
+14.3%
+HAR / QLIKE
+0.142
+0.114
+20.0%
+Source: OANDA matched forecasts, 2022-2023. Each model uses fixed 2016-2021 coefficients; lower forecast loss is not a financial
+return.
+Validation covers 4 January 2022-29 December 2023, 479 issued and observed forecasts. Both model pairs
+improve QLIKE separately in 2022 and 2023. Validation MSE and MAE improve as well. No year or date was
+removed because its loss difference was unfavorable.
+
+
+Gold Session Study II | provider-delivered OANDA data | 4 October 2026
+2016-2023 analysed | sample-size gate not met | 2024+ holdout unopened
+11
+10. Uncertainty and model comparison
+Validation pair
+QLIKE difference
+95% CI, 5-day block
+95% CI, 10-day block
+Basic
+0.039
+[0.022, 0.058]
+[0.020, 0.060]
+HAR
+0.028
+[0.014, 0.044]
+[0.014, 0.045]
+Source: 479 OANDA validation forecasts, 2022-2023. An evaluation-loss sum, not equity, PnL or an attainable trading payoff.
+Paired circular blocks of five and ten forecast dates, 10,000 draws, seed 20261004. Positive lower intervals
+support lower mean enhanced-model loss in this observed sequence. The bootstrap preserves missing-label
+positions, although none occur among these issued forecasts.
+The HAC loss-difference statistic is descriptive DM-style evidence. Nested models complicate standard DM
+inference. Secondary Clark-West tests operate on nested linear log forecasts, not smearing-adjusted QLIKE.
+Neither diagnostic overrides the minimum-sample gate or fully accounts for model-estimation uncertainty.
+
+
+Gold Session Study II | provider-delivered OANDA data | 4 October 2026
+2016-2023 analysed | sample-size gate not met | 2024+ holdout unopened
+12
+11. Acceptance gate and trading restraint
+Acceptance condition
+Basic pair
+HAR pair
+Development forecasts >=500
+FAIL
+FAIL
+Validation forecasts >=200
+PASS
+PASS
+Positive training Asian coefficient
+PASS
+PASS
+Development QLIKE reduction >=5%
+PASS
+PASS
+Validation QLIKE reduction >=3%
+PASS
+PASS
+Both validation block CIs above zero
+PASS
+PASS
+Both validation years improve QLIKE
+PASS
+PASS
+MSE/MAE deterioration <=5%
+PASS
+PASS
+Decision: INCONCLUSIVE under the registered minimum-development-sample
+requirement.
+Both model pairs fail the development count condition: 160 available versus 500 required. All other listed
+forecast conditions pass. A favorable validation result does not justify changing a failed predeclared
+sample-size criterion.
+The single trading translation remains unrun: Asian RV strictly above the 80th percentile of its previous 60
+valid sessions; first Asian bid-boundary break during London 08:00-10:00; opposite-edge executable-side
+stop; fixed London noon exit; no target and at most one trade.
+Its registered scenario uses 0.25% risk, actual bid/ask spread, $0.07/oz round-trip commission and $0.05/oz
+adverse slippage per fill, plus doubled-cost stress. These are assumptions, not verified broker tariffs.
+Ordered tick replay and broker size/margin specifications are still absent.
+No trade expectancy, profit factor, equity curve or Monte Carlo distribution is invented for Study II. There is
+no validated profitable strategy and no final-period access.
+
+
+Gold Session Study II | provider-delivered OANDA data | 4 October 2026
+2016-2023 analysed | sample-size gate not met | 2024+ holdout unopened
+13
+12. Study I timestamp erratum
+A real implementation defect, preserved and corrected transparently.
+Pandas 3 preserves millisecond resolution for epoch-millisecond conversions. Study I's gap check divided
+native index integers by a nanosecond minute constant, understating elapsed gaps. The intended
+five-minute rule was therefore not enforced correctly; the separate count, boundary and quote-flag rules still
+applied.
+Period / diagnostic
+Frozen trades
+Corrected trades
+Corrected PF / mean R
+development / 0800 NY
+732
+732
+0.921 / -0.039
+development / 1200 NY
+734
+732
+1.012 / +0.008
+validation / 0800 NY
+265
+265
+0.743 / -0.140
+validation / 1200 NY
+265
+264
+0.876 / -0.091
+Re-running the existing archive with nanosecond indices leaves EXP001 unchanged: development beta
++0.288493, N=1,508; validation beta +0.322187, N=495. The early-exit trade-R ledgers remain identical in
+both periods.
+The corrected noon rule removes development NY-evening dates 19 August 2018 and 24 January 2019,
+and validation 17 October 2022. Its economic acceptance conclusion remains negative. Frozen noon ledgers
+and their Monte Carlo outputs describe the old screen and are not relabelled as corrected results.
+The frozen report and archived bundle are unedited. Separate corrected ledgers and the implementation
+note provide the erratum. Study II now measures gaps using elapsed timedeltas and tests the same rejection
+across millisecond, microsecond and nanosecond indices.
+
+
+Gold Session Study II | provider-delivered OANDA data | 4 October 2026
+2016-2023 analysed | sample-size gate not met | 2024+ holdout unopened
+14
+13. Reproduction and evidence record
+Validation comparison
+DM-style HAC p, descriptive
+Clark-West log-MSPE p
+Basic
+2.29e-05
+1.36e-10
+HAR
+9.82e-05
+6.85e-10
+Core evidence files: SOURCE_INVENTORY.csv and SOURCE_SUMMARY.json;
+session_feature_and_coverage_ledger.csv; forecast_ledger.csv; development_coefficients.json;
+forecast_comparison.json; EXP001_direct_reproduction.json; ASSOCIATION_REPLICATION.json;
+corrected archive-gap feature/trade ledgers.
+Registration: configs/study.json and preregistration/PROTOCOL.md. Dated implementation and source-role
+amendments document the timestamp repair and OANDA source choice before forecast evaluation. Original
+registration fingerprints remain intact.
+Source/model code commit before evaluation: 8c42e39a0160c9745c27cb5bb866e7841a938ed9.
+Subsequent report-only commits may describe the finished deliverable; they do not replace the statistical
+registration.
+Fourteen implementation checks pass: named-zone clocks, stale and strictly prior lags, integer time-delta
+parsing, paired complete quotes, missing-gap omission, future-label independence, retained flat candles,
+fixed validation coefficients, positive-target QLIKE and locked final dates. Synthetic test fixtures never enter
+empirical results.
+Reproduce from this study folder: run the documented OANDA acquisition with a locally stored demo token;
+run forecast.py and replicate_exp001.py for provider oanda; run diagnostics.py for inventory, coverage and
+association records; run archive_gap_sensitivity.py using frozen Study I cached inputs; then rebuild this
+report. Public bundles exclude tokens, account identifiers and raw provider responses.
+
+
+Gold Session Study II | provider-delivered OANDA data | 4 October 2026
+2016-2023 analysed | sample-size gate not met | 2024+ holdout unopened
+15
+14. Conclusions and references
+The research progressed from a rejected expansion hypothesis to a
+provider-supported volatility lead.
+OANDA confirms the positive EXP001 range relationship and positive Asian-to-London realised-variance
+associations on qualifying data. Current Asian variance improves the registered validation forecasts against
+both explicit baselines.
+Acceptance remains inconclusive because the development OOS sample is too small under the fixed rules.
+Source coverage is highly uneven across earlier years, and selected-session inference may not generalise
+to low-activity conditions. Neither this finding nor a volatility forecast alone establishes a profitable direction
+or execution rule.
+The appropriate next work is to improve documented historical coverage or obtain another authenticated
+feed under a separately registered extension, without selecting criteria on viewed validation. Preserve 2024+
+until all required gates and a final freeze justify opening it. No C++ optimisation or EA deployment is
+warranted by these results.
+Primary methodology and source references
+OANDA API access: developer.oanda.com/rest-live-v20/introduction
+OANDA candle schema: OANDA v20 instrument specification
+Pandas time resolution: pandas 3.0 datetime-resolution documentation
+Patton (2011): Volatility forecast comparison using imperfect volatility proxies
+Clark and West (2007): Approximately normal tests for equal predictive accuracy in nested models
+Motivation credit: TokyoCoil.pdf supplied the original regional-session case study; its USDJPY performance claims were not
+independently verified or used as evidence about gold. XAUUSD_Quant_Research_Master_Prompt.pdf supplied the research
+specification.
+Exploratory research and statistical forecasts, not investment advice or a recommendation to trade. No live profitability, raw-tick
+execution proof, authenticated Dukascopy delivery or GC-futures validation is claimed.

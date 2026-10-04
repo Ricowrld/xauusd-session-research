@@ -1,0 +1,7 @@
+power_target,n,block,assumed_effect,estimated_conditional_power,monte_carlo_se,draws,scope
+0.8,23905,5,0.05,0.9797,0.0009971938126562957,20000,"centred-pilot location-shift known-planning-LRV test, not full nested-model replay"
+0.8,23905,10,0.05,0.97265,0.0011532991264195074,20000,"centred-pilot location-shift known-planning-LRV test, not full nested-model replay"
+0.8,23905,20,0.05,0.9699,0.0012081802431756616,20000,"centred-pilot location-shift known-planning-LRV test, not full nested-model replay"
+0.9,32001,5,0.05,0.9991,0.00021203655345246628,20000,"centred-pilot location-shift known-planning-LRV test, not full nested-model replay"
+0.9,32001,10,0.05,0.99855,0.00026906295731668,20000,"centred-pilot location-shift known-planning-LRV test, not full nested-model replay"
+0.9,32001,20,0.05,0.9983,0.0002912996738755499,20000,"centred-pilot location-shift known-planning-LRV test, not full nested-model replay"

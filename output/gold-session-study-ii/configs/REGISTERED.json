@@ -1,0 +1,11 @@
+{
+  "registered_utc": "2026-10-04T21:23:38.774099+00:00",
+  "status": "FOLLOW-UP PROTOCOL; not a final evidence freeze",
+  "new_empirical_data_evaluated": false,
+  "synthetic_unit_tests_only": true,
+  "holdout_accessed": false,
+  "files": {
+    "configs/study.json": "4c89cec12f61aa1fceb1721da2dc6aa627850f2c51c64b4b1bf7faa2dddf04d7",
+    "preregistration/PROTOCOL.md": "22279d5b3c4bc54119e5c267a25711b08613e056a5b585d396cc0a702c45d344"
+  }
+}

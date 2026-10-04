@@ -1,0 +1,7 @@
+**/__pycache__/
+**/.env*
+**/*.token
+**/*.parquet
+**/data/raw/
+**/data/independent/
+**/data/LOCKED_HOLDOUT/

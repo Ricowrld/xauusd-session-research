@@ -1,0 +1,13 @@
+{
+  "primary_effect": 0.05,
+  "primary_power": 0.9,
+  "primary_omega_normalised": 7.6138640123073404,
+  "primary_required_scored_forecasts": 32001,
+  "pilot_ledger_sha256": "32b1e3c3484a92e9320af7dd29d1ff59f136e77ec26383566d99aad68e834157",
+  "pilot_only": true,
+  "fresh_confirmation_outcomes_evaluated": false,
+  "power_scope": "approximate positive-mean criterion; not guaranteed joint acceptance power",
+  "precision_half_width_at_primary_n": 0.030232138883677102,
+  "variance_transport_multiplier": 1.5,
+  "holdout_accessed": false
+}

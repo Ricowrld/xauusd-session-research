@@ -1,0 +1,37 @@
+{
+  "registration": "PREREGISTRATION.md",
+  "dataset_version": "922f83a60cc574e7395fb27397077288055a1ef6",
+  "config_version": "gold-coil-v1",
+  "cost_assumptions": "Not applicable to statistical effect",
+  "results": {
+    "experiment_id": "EXP005",
+    "split": "validation",
+    "N": 495,
+    "beta": -0.007135547137166213,
+    "se": 0.1151564028264596,
+    "t": -0.06196396346210522,
+    "p": 0.9505915298220544,
+    "ci_low": -0.2328379492662135,
+    "ci_high": 0.21856685499188108,
+    "r2": 0.006953268408130597,
+    "target": "DxC",
+    "outcome": "Y_return",
+    "bootstrap_ci_low": -0.23350949952228187,
+    "bootstrap_ci_high": 0.22564629119481364,
+    "mean": 0.010137117786206191,
+    "median": 0.0492386194563112,
+    "std": 1.1232746846008974,
+    "skew": -0.29302534124101004,
+    "kurtosis_excess": 4.089997931324726,
+    "pearson": -0.04176116138120807,
+    "spearman": -0.04836612171077367,
+    "q": 0.9787440249104907
+  },
+  "decision": "INCONCLUSIVE: evidence gate fails",
+  "known_weaknesses": [
+    "Third-party feed not authenticated",
+    "M1 closure padding excluded by flat-candle rule",
+    "News not controlled"
+  ],
+  "next_allowed_action": "Authenticate source and register future research; holdout reserved"
+}

@@ -1,0 +1,18 @@
+{
+  "sample_periods": 32,
+  "missing_periods": 24,
+  "complete_controls": 8,
+  "requests": 192,
+  "http_200_requests": 192,
+  "missing_minutes_in_sample": 259,
+  "recovered_missing_minutes_any_variant": 0,
+  "gap_periods_day_BA_identical": 24,
+  "gap_periods_hour_BA_identical": 24,
+  "gap_periods_side_sets_identical": 24,
+  "controls_hour_BA_identical": 8,
+  "shared_ohlc_changed_minutes": 0,
+  "native_m5_total_in_gap_hours": 250,
+  "inference": "Diagnostic sample only; repeated endpoint gaps do not prove absence of historical trading",
+  "holdout_accessed": false,
+  "original_source_files_modified": false
+}

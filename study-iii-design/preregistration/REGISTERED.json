@@ -1,0 +1,15 @@
+{
+  "client_date": "2026-10-05",
+  "registered_before_fresh_confirmation_outcomes": true,
+  "status": "Frozen design; capacity criterion fails before new forecast evaluation",
+  "files": {
+    "configs/confirmation.json": "b2d79d9fc20e1ab68ec3fd045820456bfb1b75566c7edd2cfb240b5a509845b3",
+    "planning/POWER_PLAN.md": "08037b5aa76e3569e8cb2ceec373772e7dfdc8503a5dcdbc17a40a895da0b8c0",
+    "planning/COVERAGE_RECHECK_PLAN.md": "0e522d3bf3245c98aaeae89f513603f7d077702752b8747287c8472bfd8dabba",
+    "configs/planning.json": "094e989150766f1596c2d197056eca3d128ca9ccf5f30ba098c9da0692d283ee",
+    "planning/METHOD_FREEZE.json": "4067209ff2f9e72e6516f8ff8e7d9a159ab2c0965fb30d43e57fc5f50e6b7064",
+    "results/power/POWER_SUMMARY.json": "a9804a8eae1dea52d5c75ca3cbe461bfd64a6327a4db30e8935b1e7e17dbd1f4",
+    "results/capacity.json": "a59f6c7f4bd6fc4637ac6b471c0e5b37692d34aa6863ad498694976edf1fb710"
+  },
+  "holdout_accessed": false
+}

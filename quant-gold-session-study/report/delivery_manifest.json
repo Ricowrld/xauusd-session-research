@@ -1,0 +1,13 @@
+{
+  "report_sha256": "f135bfbb773f776e68b1ca3036bec017ab38a5df969c7882d89a5851162f7e5c",
+  "reporting_commit": "805e1de82b034fba8928cf32e51c3256f6b28731",
+  "analysis_freeze_commit": "e066e53c81d080dad09d6a764a32ff5ee283b837",
+  "report_layout_changed_after_freeze": true,
+  "statistical_and_execution_core_unchanged": true,
+  "holdout_acquired": false,
+  "holdout_viewed": false,
+  "tests_passed": 8,
+  "pdf_pages": 25,
+  "source_status": "Provisional third-party archive; original source unauthenticated",
+  "bundle_excludes": "Raw source CSVs, processed M1 parquet and Git internals"
+}

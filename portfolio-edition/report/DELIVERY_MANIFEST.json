@@ -1,0 +1,13 @@
+{
+  "edition": "Study I portfolio edition; editorial presentation only",
+  "pdf": "XAUUSD_Cross_Session_Research_Portfolio_Edition.pdf",
+  "pdf_sha256": "c70bee1993ecb3bd638636d1e47b76ab86e22befa2970eb77087cdc94da3a591",
+  "pages": 25,
+  "supporting_files": {
+    "README.md": "a96a496549d31da1e53cccfd212ca46836de7524f3429e3eb57eff96638aac9e",
+    "CV_Project_Entry.md": "d4104ead0f82a8a4ea7015469ab6c65c44cddd4f11b396655b209391136fabb6",
+    "EDITORIAL_CHANGELOG.md": "6d51ee49c91d572a589b5df6f7796a397c9cb1212870311a142ea89ab275e880"
+  },
+  "empirical_results_changed": false,
+  "holdout_accessed": false
+}

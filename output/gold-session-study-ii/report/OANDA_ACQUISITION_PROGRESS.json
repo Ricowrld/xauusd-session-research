@@ -1,0 +1,13 @@
+{
+  "requested_calendar_days": 2922,
+  "completed_days": 2922,
+  "cached_days": 2,
+  "received_candles": 2789384,
+  "status": "COMPLETE",
+  "period": [
+    "2016-01-01",
+    "2023-12-31"
+  ],
+  "holdout_accessed": false,
+  "last_completed_date": "2023-12-31"
+}

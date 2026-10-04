@@ -1,0 +1,138 @@
+{
+  "version": "gold-session-confirmation-v1",
+  "client_date": "2026-10-05",
+  "question": "Does current Asian realised variance provide incremental information about London realised variance?",
+  "primary_pair": [
+    "har_baseline",
+    "har_enhanced"
+  ],
+  "secondary_pair": [
+    "baseline",
+    "enhanced"
+  ],
+  "models": {
+    "baseline": [
+      "lag_log_london_variance",
+      "lag_log_daily_variance"
+    ],
+    "enhanced": [
+      "lag_log_london_variance",
+      "lag_log_daily_variance",
+      "log_asia_variance"
+    ],
+    "har_baseline": [
+      "lag_log_london_variance",
+      "lag_log_daily_variance",
+      "log_london_mean5",
+      "log_london_mean20"
+    ],
+    "har_enhanced": [
+      "lag_log_london_variance",
+      "lag_log_daily_variance",
+      "log_london_mean5",
+      "log_london_mean20",
+      "log_asia_variance"
+    ]
+  },
+  "sessions": {
+    "asia": [
+      "Asia/Tokyo",
+      "09:00",
+      "15:00"
+    ],
+    "london": [
+      "Europe/London",
+      "08:00",
+      "12:00"
+    ],
+    "new_york": [
+      "America/New_York",
+      "08:00",
+      "12:00"
+    ]
+  },
+  "target": "London M5 midpoint realised variance, unannualised sum of squared log returns",
+  "data_quality": {
+    "session_minimum_m1_fraction": 0.98,
+    "daily_minimum_m1_fraction": 0.9,
+    "session_maximum_gap_minutes": 5,
+    "daily_maximum_gap_minutes": 90,
+    "maximum_lag_age_days": 4,
+    "source_flat_policy": "Retain genuine received flat bars; no inserted bars, interpolation, forward fill or flat-only deletion. Quote volume is recorded, not central traded volume.",
+    "suspicious_spread_usd": 5.0,
+    "suspicious_adjacent_midpoint_jump": 0.02
+  },
+  "complete_m5_fractions": {
+    "session": 0.95,
+    "daily": 0.85
+  },
+  "estimation": "OLS of log variance with intercept; exponentiate using training-only mean(exp(residual)) smearing. Clip variance forecasts below 1e-12 only. No target clipping.",
+  "primary_confirmation_period": [
+    "1999-01-01",
+    "2015-12-31"
+  ],
+  "period_note": "Use only actually available provider history; 1999 is a search-window bound, not a claim that M1 exists then.",
+  "training": "First 400 eligible labelled observations on new provider history, targets completed before origin; then freeze coefficients/smearing once.",
+  "minimum_training_rows": 400,
+  "scored_required_n": 32001,
+  "secondary_cross_feed_period": [
+    "2016-01-01",
+    "2023-12-31"
+  ],
+  "secondary_note": "Already viewed market periods on a new source; do not pool into primary fresh-period N or claim virgin-outcome confirmation.",
+  "primary_effect_planning": 0.05,
+  "primary_power_planning": 0.9,
+  "one_sided_alpha": 0.025,
+  "inference_blocks": [
+    5,
+    10,
+    20
+  ],
+  "bootstrap_replicates": 10000,
+  "acceptance": {
+    "source": "Direct provider HTTPS delivery or authenticated documented export on a feed independent of OANDA; no mirrors.",
+    "feasibility": "Required unique scored dates must be available before forecast evaluation; do not multiply N by broker count.",
+    "label_coverage": "At least 95% of issued confirmation forecasts have qualifying London outcomes; missingness diagnostics required.",
+    "primary_qlike": "Positive mean HAR-minus-HAR+Asia QLIKE loss and lower two-sided 95% paired block CI above zero for all 5/10/20 blocks.",
+    "coefficient": "Current Asia coefficient positive in frozen initial training fit.",
+    "year_consistency": "Positive mean primary QLIKE difference in each full scored calendar year; partial startup year is descriptive.",
+    "secondary_losses": "No more than 5% MSE or MAE deterioration versus HAR.",
+    "magnitude": "Report relative effect and CI against the 5% design target; passing positivity does not prove benefit >=5%.",
+    "nested_inference": "Primary evaluates fixed trained forecast pairs conditional on training; conventional DM is descriptive. Clark-West on nested linear log-MSPE is secondary, never mechanically applied to QLIKE.",
+    "missing_or_insufficient": "Acceptance-inconclusive; no gate reduction, alternate model, date selection or trading test."
+  },
+  "data_source_plan": {
+    "priority_1": "Direct Dukascopy provider M1 bid/ask or ticks, provider access verified with pre-2024 probes.",
+    "priority_2": "Authenticated JForex historical export or provider-documented requester-pays S3 with explicit credentials/budget.",
+    "priority_3": "A second independently originating broker export with documented symbol, dates and paired quotes; requires source-specific amendment before its outcome evaluation.",
+    "oanda_role": "Coverage diagnosis and pilot only; additional OANDA history is not an independent-provider confirmation.",
+    "capacity_stop": "If pre-2024 fresh unique dates cannot supply the frozen N, do not bulk acquire for a nominally powered study."
+  },
+  "trading_candidate": {
+    "status": "Preregistered but disabled until forecast and independent-feed gates pass",
+    "asia_rv_percentile": 0.8,
+    "previous_valid_asia_sessions": 60,
+    "comparison": "strictly greater than linear-interpolated 80th percentile of previous 60 RV values, excluding current session",
+    "entry_window_london": [
+      "08:00",
+      "10:00"
+    ],
+    "entry": "First bid boundary break; upper boundary buys at contemporaneous ask; lower boundary sells at bid; observed quote sequence required",
+    "stop": "Long exits when bid <= Asian bid low; short exits when ask >= Asian bid high",
+    "exit_london": "12:00",
+    "maximum_trades_per_day": 1,
+    "minimum_asian_width_usd": 0.2,
+    "target": null,
+    "risk_fraction": 0.0025,
+    "commission_roundtrip_usd_per_oz": 0.07,
+    "adverse_slippage_per_fill_usd": 0.05,
+    "cost_stress_multiplier": 2.0,
+    "news_filter": "None; fixed exit. No historical news rule claimed.",
+    "execution_requirement": "Provider tick bid/ask replay with broker sizing; M1 may give a conservative diagnostic only, never a validated execution claim",
+    "trading_gate": "Positive net development and validation expectancy; validation 95% five-trade-block bootstrap lower bound >0 at base and doubled costs; at least 100 development and 50 validation trades; unresolved execution paths must block acceptance"
+  },
+  "trading_condition": "Run the unchanged candidate exactly once only after confirmation passes, using independent ordered bid/ask ticks and verified contract sizing. Failure ends this translation.",
+  "holdout_policy": "2024-01-01 onward remains locked, including 2024-2026. No query, forecast evaluation, news/trade study or runner for this interval.",
+  "ea_or_cpp_work": "Deferred; neither is part of this design pack.",
+  "monetisation_extensions": "Any volatility-instrument or execution/risk application is a separately registered later study."
+}

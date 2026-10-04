@@ -1,0 +1,13 @@
+{
+  "client_date": "2026-10-05",
+  "git_commit": "ebf954eb482d3c648d84ac55c77202d0575e4d75",
+  "registered_before_calculation_and_fresh_outcomes": true,
+  "files": {
+    "configs/planning.json": "094e989150766f1596c2d197056eca3d128ca9ccf5f30ba098c9da0692d283ee",
+    "planning/POWER_PLAN.md": "08037b5aa76e3569e8cb2ceec373772e7dfdc8503a5dcdbc17a40a895da0b8c0",
+    "planning/COVERAGE_RECHECK_PLAN.md": "0e522d3bf3245c98aaeae89f513603f7d077702752b8747287c8472bfd8dabba",
+    "src/common.py": "63388684e161ab294635c088c51a9c9ff2515424bb8675e41d815e032705e2f5",
+    "src/coverage.py": "ff2e966cf7ec1df0e9fd34aeee5856b1ad6a6f572b310fb7e738b4bb76d0f4e5",
+    "src/power.py": "cb765bf29a0147c39cbc3207e830db8cc0be2a776e9181bc613fd85449f2b07a"
+  }
+}

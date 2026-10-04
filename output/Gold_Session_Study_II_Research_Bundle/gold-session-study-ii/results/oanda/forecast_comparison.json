@@ -1,0 +1,281 @@
+{
+  "status": "FORECAST_TEST_ONLY; source, replication and execution gates separate",
+  "comparisons": {
+    "enhanced": {
+      "development_oos": {
+        "issued_forecasts": 160,
+        "observed_labels": 160,
+        "missing_labels": 0,
+        "losses": {
+          "mse": {
+            "baseline": 3.683108650315415e-11,
+            "enhanced": 2.726209619830163e-11,
+            "improvement_fraction": 0.2598074402185515
+          },
+          "mae": {
+            "baseline": 4.629718640097085e-06,
+            "enhanced": 3.554643096255399e-06,
+            "improvement_fraction": 0.23221185290411983
+          },
+          "qlike": {
+            "baseline": 0.1396294868690799,
+            "enhanced": 0.10794283082241722,
+            "improvement_fraction": 0.22693384296665697
+          }
+        },
+        "qlike_diff_ci": {
+          "5": [
+            0.01829081479727595,
+            0.04578175362398043
+          ],
+          "10": [
+            0.017907517668839187,
+            0.046599649465049506
+          ]
+        },
+        "dm_style_hac_descriptive": {
+          "mean": 0.03168665604666268,
+          "se": 0.007181040615433331,
+          "one_sided_normal_p": 5.108156547603682e-06
+        },
+        "log_mspe": {
+          "baseline": 0.21149264026855788,
+          "enhanced": 0.18048703862459048
+        },
+        "clark_west_log_mspe_secondary": {
+          "mean": 0.06909898586934402,
+          "se": 0.020666955983628877,
+          "one_sided_normal_p": 0.0004137142735839438
+        },
+        "missingness_diagnostic": {
+          "asia_variance": {
+            "labelled_mean": 9.996654945748658e-06,
+            "unlabelled_mean": null
+          },
+          "lag_log_london_variance": {
+            "labelled_mean": -11.701554019281739,
+            "unlabelled_mean": null
+          },
+          "lag_log_daily_variance": {
+            "labelled_mean": -9.658743759749166,
+            "unlabelled_mean": null
+          }
+        }
+      },
+      "validation": {
+        "issued_forecasts": 479,
+        "observed_labels": 479,
+        "missing_labels": 0,
+        "losses": {
+          "mse": {
+            "baseline": 6.618057450915749e-11,
+            "enhanced": 5.966439189112056e-11,
+            "improvement_fraction": 0.09846065354321265
+          },
+          "mae": {
+            "baseline": 5.176858160178716e-06,
+            "enhanced": 4.340356503470517e-06,
+            "improvement_fraction": 0.16158481280068934
+          },
+          "qlike": {
+            "baseline": 0.16161394342013896,
+            "enhanced": 0.12306665810867512,
+            "improvement_fraction": 0.23851460149855117
+          }
+        },
+        "qlike_diff_ci": {
+          "5": [
+            0.021982627526259756,
+            0.058160559176807666
+          ],
+          "10": [
+            0.020393865203312416,
+            0.06023309538979104
+          ]
+        },
+        "dm_style_hac_descriptive": {
+          "mean": 0.03854728531146382,
+          "se": 0.009457122905234367,
+          "one_sided_normal_p": 2.2907964254852247e-05
+        },
+        "log_mspe": {
+          "baseline": 0.29132595777774506,
+          "enhanced": 0.23786773513511048
+        },
+        "clark_west_log_mspe_secondary": {
+          "mean": 0.1003583797826478,
+          "se": 0.01589474002466807,
+          "one_sided_normal_p": 1.360127639368264e-10
+        },
+        "missingness_diagnostic": {
+          "asia_variance": {
+            "labelled_mean": 9.552497807163788e-06,
+            "unlabelled_mean": null
+          },
+          "lag_log_london_variance": {
+            "labelled_mean": -11.659908296542278,
+            "unlabelled_mean": null
+          },
+          "lag_log_daily_variance": {
+            "labelled_mean": -9.651731788166373,
+            "unlabelled_mean": null
+          }
+        }
+      },
+      "annual_validation_qlike_improvement": {
+        "2022": 0.14142823506574306,
+        "2023": 0.30730328112325617
+      },
+      "conditions": {
+        "development_n": false,
+        "validation_n": true,
+        "positive_asia_coefficient": true,
+        "development_qlike": true,
+        "validation_qlike": true,
+        "both_bootstrap_blocks": true,
+        "both_validation_years": true,
+        "mse_and_mae": true
+      },
+      "pass_gate": false
+    },
+    "har_enhanced": {
+      "development_oos": {
+        "issued_forecasts": 160,
+        "observed_labels": 160,
+        "missing_labels": 0,
+        "losses": {
+          "mse": {
+            "baseline": 3.032090949181285e-11,
+            "enhanced": 2.4514969110375285e-11,
+            "improvement_fraction": 0.19148305505167196
+          },
+          "mae": {
+            "baseline": 4.1777126771695675e-06,
+            "enhanced": 3.302633850190681e-06,
+            "improvement_fraction": 0.20946362150777667
+          },
+          "qlike": {
+            "baseline": 0.12139500608740486,
+            "enhanced": 0.09642637055407008,
+            "improvement_fraction": 0.20568091174489725
+          }
+        },
+        "qlike_diff_ci": {
+          "5": [
+            0.010985416621137424,
+            0.039620650056698334
+          ],
+          "10": [
+            0.010760129629283332,
+            0.039955522265221574
+          ]
+        },
+        "dm_style_hac_descriptive": {
+          "mean": 0.02496863553333477,
+          "se": 0.007419079754192415,
+          "one_sided_normal_p": 0.0003820771114259562
+        },
+        "log_mspe": {
+          "baseline": 0.18892108074368713,
+          "enhanced": 0.16716005745642437
+        },
+        "clark_west_log_mspe_secondary": {
+          "mean": 0.057286616739614285,
+          "se": 0.01980673993167497,
+          "one_sided_normal_p": 0.0019122911139852947
+        },
+        "missingness_diagnostic": {
+          "asia_variance": {
+            "labelled_mean": 9.996654945748658e-06,
+            "unlabelled_mean": null
+          },
+          "lag_log_london_variance": {
+            "labelled_mean": -11.701554019281739,
+            "unlabelled_mean": null
+          },
+          "lag_log_daily_variance": {
+            "labelled_mean": -9.658743759749166,
+            "unlabelled_mean": null
+          }
+        }
+      },
+      "validation": {
+        "issued_forecasts": 479,
+        "observed_labels": 479,
+        "missing_labels": 0,
+        "losses": {
+          "mse": {
+            "baseline": 6.261009081458816e-11,
+            "enhanced": 5.822201457319604e-11,
+            "improvement_fraction": 0.07008576707526033
+          },
+          "mae": {
+            "baseline": 4.8737660049087035e-06,
+            "enhanced": 4.175755470160743e-06,
+            "improvement_fraction": 0.14321790049931543
+          },
+          "qlike": {
+            "baseline": 0.14202567717610154,
+            "enhanced": 0.11368795604518978,
+            "improvement_fraction": 0.19952533720909527
+          }
+        },
+        "qlike_diff_ci": {
+          "5": [
+            0.014451241380166058,
+            0.043729318200370695
+          ],
+          "10": [
+            0.013742768263101647,
+            0.044746314547992654
+          ]
+        },
+        "dm_style_hac_descriptive": {
+          "mean": 0.028337721130911785,
+          "se": 0.007610482800144266,
+          "one_sided_normal_p": 9.823540744034787e-05
+        },
+        "log_mspe": {
+          "baseline": 0.2542441577066657,
+          "enhanced": 0.2183505073831912
+        },
+        "clark_west_log_mspe_secondary": {
+          "mean": 0.07726255903149648,
+          "se": 0.01275169589112231,
+          "one_sided_normal_p": 6.848407393484746e-10
+        },
+        "missingness_diagnostic": {
+          "asia_variance": {
+            "labelled_mean": 9.552497807163788e-06,
+            "unlabelled_mean": null
+          },
+          "lag_log_london_variance": {
+            "labelled_mean": -11.659908296542278,
+            "unlabelled_mean": null
+          },
+          "lag_log_daily_variance": {
+            "labelled_mean": -9.651731788166373,
+            "unlabelled_mean": null
+          }
+        }
+      },
+      "annual_validation_qlike_improvement": {
+        "2022": 0.10321298050286826,
+        "2023": 0.2751665934765126
+      },
+      "conditions": {
+        "development_n": false,
+        "validation_n": true,
+        "positive_asia_coefficient": true,
+        "development_qlike": true,
+        "validation_qlike": true,
+        "both_bootstrap_blocks": true,
+        "both_validation_years": true,
+        "mse_and_mae": true
+      },
+      "pass_gate": false
+    }
+  },
+  "all_forecast_gates_pass": false,
+  "holdout_unlocked": false
+}

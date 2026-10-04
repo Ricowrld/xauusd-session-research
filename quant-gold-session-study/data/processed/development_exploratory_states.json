@@ -1,0 +1,23 @@
+[
+  {
+    "bottom_range_pct": 10,
+    "N": 252,
+    "mean_normalized_london_range": 1.0007147843113104,
+    "mean_distance_lag_range": 0.5896929750685133,
+    "breach_rate_pct": 97.22222222222221
+  },
+  {
+    "bottom_range_pct": 20,
+    "N": 402,
+    "mean_normalized_london_range": 0.9876661163150113,
+    "mean_distance_lag_range": 0.5479720513362223,
+    "breach_rate_pct": 95.02487562189054
+  },
+  {
+    "bottom_range_pct": 30,
+    "N": 553,
+    "mean_normalized_london_range": 0.9944813642581389,
+    "mean_distance_lag_range": 0.5358408644391981,
+    "breach_rate_pct": 93.85171790235081
+  }
+]

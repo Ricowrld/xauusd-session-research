@@ -1,0 +1,9 @@
+{
+  "protocol_code_commit": "5895bea9c1c641c18a836bc96f6280da14e07755",
+  "freeze_type": "Preregistration/source snapshot only, not final evidence acceptance",
+  "date_utc": "2026-10-04T21:25:49.603025+00:00",
+  "holdout_files": 0,
+  "tests_passed": 12,
+  "tests_type": "Synthetic unit fixtures only",
+  "empirical_study_ii_results_available": false
+}

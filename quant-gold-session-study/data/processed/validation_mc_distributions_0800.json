@@ -1,0 +1,298 @@
+{
+  "iid_trade_0.0025": {
+    "terminal_percentiles_usd": [
+      92978.90655518252,
+      96168.87541049224,
+      100833.2136924248
+    ],
+    "annual_return_percentiles_pct": [
+      -7.021093444817475,
+      -3.831124589507767,
+      0.8332136924248135
+    ],
+    "sharpe_percentiles": [
+      -3.36004107120907,
+      -1.4135652115076924,
+      0.26331491581854916
+    ],
+    "maxDD_percentiles_pct": [
+      2.690087095830009,
+      5.070818466514593,
+      7.441026495968002
+    ],
+    "drawdown_duration_percentiles_business_days": [
+      115.0,
+      237.0,
+      252.0
+    ],
+    "longest_losing_streak_percentiles": [
+      6.0,
+      9.0,
+      14.0
+    ],
+    "losing_21_day_buckets_percentiles": [
+      6.0,
+      9.0,
+      11.0
+    ]
+  },
+  "iid_trade_0.0050": {
+    "terminal_percentiles_usd": [
+      86403.58893642404,
+      92418.04520745753,
+      101550.23513077466
+    ],
+    "annual_return_percentiles_pct": [
+      -13.596411063575953,
+      -7.5819547925424615,
+      1.5502351307746722
+    ],
+    "sharpe_percentiles": [
+      -3.36004107120907,
+      -1.4135652115076924,
+      0.26331491581854916
+    ],
+    "maxDD_percentiles_pct": [
+      5.332804334300675,
+      9.932081915245144,
+      14.3714253049055
+    ],
+    "drawdown_duration_percentiles_business_days": [
+      116.0,
+      237.0,
+      252.0
+    ],
+    "longest_losing_streak_percentiles": [
+      6.0,
+      9.0,
+      14.0
+    ],
+    "losing_21_day_buckets_percentiles": [
+      6.0,
+      9.0,
+      11.0
+    ]
+  },
+  "iid_trade_0.0075": {
+    "terminal_percentiles_usd": [
+      80250.14357487351,
+      88746.40003739954,
+      102176.60571428848
+    ],
+    "annual_return_percentiles_pct": [
+      -19.749856425126488,
+      -11.253599962600463,
+      2.1766057142884936
+    ],
+    "sharpe_percentiles": [
+      -3.3600410712090705,
+      -1.4135652115076927,
+      0.26331491581854927
+    ],
+    "maxDD_percentiles_pct": [
+      7.936961796957648,
+      14.586556879123163,
+      20.82035785507429
+    ],
+    "drawdown_duration_percentiles_business_days": [
+      117.95000000000005,
+      237.0,
+      252.0
+    ],
+    "longest_losing_streak_percentiles": [
+      6.0,
+      9.0,
+      14.0
+    ],
+    "losing_21_day_buckets_percentiles": [
+      6.0,
+      9.0,
+      11.0
+    ]
+  },
+  "iid_trade_0.0100": {
+    "terminal_percentiles_usd": [
+      74480.02187571097,
+      85153.75161256232,
+      102654.14382188002
+    ],
+    "annual_return_percentiles_pct": [
+      -25.51997812428903,
+      -14.846248387437678,
+      2.654143821880016
+    ],
+    "sharpe_percentiles": [
+      -3.36004107120907,
+      -1.4135652115076924,
+      0.26331491581854916
+    ],
+    "maxDD_percentiles_pct": [
+      10.497556538327977,
+      19.04091487138702,
+      26.81047969678007
+    ],
+    "drawdown_duration_percentiles_business_days": [
+      118.0,
+      237.0,
+      252.0
+    ],
+    "longest_losing_streak_percentiles": [
+      6.0,
+      9.0,
+      14.0
+    ],
+    "losing_21_day_buckets_percentiles": [
+      6.0,
+      9.0,
+      11.0
+    ]
+  },
+  "10_day_block_0.0025": {
+    "terminal_percentiles_usd": [
+      92803.61812588133,
+      96181.6357944332,
+      100866.55471436573
+    ],
+    "annual_return_percentiles_pct": [
+      -7.196381874118668,
+      -3.8183642055668043,
+      0.8665547143657403
+    ],
+    "sharpe_percentiles": [
+      -3.458591121649386,
+      -1.4257091262084072,
+      0.27855932962629476
+    ],
+    "maxDD_percentiles_pct": [
+      2.6788247297993713,
+      5.103179147214249,
+      7.6760328721402535
+    ],
+    "drawdown_duration_percentiles_business_days": [
+      116.0,
+      233.0,
+      252.0
+    ],
+    "longest_losing_streak_percentiles": [
+      5.0,
+      8.0,
+      14.0
+    ],
+    "losing_21_day_buckets_percentiles": [
+      5.0,
+      8.0,
+      11.0
+    ]
+  },
+  "10_day_block_0.0050": {
+    "terminal_percentiles_usd": [
+      86081.14077549485,
+      92443.67669900472,
+      101621.72465297328
+    ],
+    "annual_return_percentiles_pct": [
+      -13.918859224505162,
+      -7.556323300995283,
+      1.621724652973279
+    ],
+    "sharpe_percentiles": [
+      -3.458591121649386,
+      -1.4257091262084072,
+      0.27855932962629476
+    ],
+    "maxDD_percentiles_pct": [
+      5.310376108598465,
+      9.994949926899267,
+      14.80202487649754
+    ],
+    "drawdown_duration_percentiles_business_days": [
+      117.0,
+      234.0,
+      252.0
+    ],
+    "longest_losing_streak_percentiles": [
+      5.0,
+      8.0,
+      14.0
+    ],
+    "losing_21_day_buckets_percentiles": [
+      5.0,
+      8.0,
+      11.0
+    ]
+  },
+  "10_day_block_0.0075": {
+    "terminal_percentiles_usd": [
+      79808.01704530427,
+      88790.12392502188,
+      102295.4049315922
+    ],
+    "annual_return_percentiles_pct": [
+      -20.191982954695728,
+      -11.209876074978132,
+      2.295404931592199
+    ],
+    "sharpe_percentiles": [
+      -3.4585911216493863,
+      -1.4257091262084072,
+      0.2785593296262949
+    ],
+    "maxDD_percentiles_pct": [
+      7.908797145012459,
+      14.676025221472328,
+      21.420210954147866
+    ],
+    "drawdown_duration_percentiles_business_days": [
+      118.0,
+      234.0,
+      252.0
+    ],
+    "longest_losing_streak_percentiles": [
+      5.0,
+      8.0,
+      14.0
+    ],
+    "losing_21_day_buckets_percentiles": [
+      6.0,
+      8.0,
+      11.0
+    ]
+  },
+  "10_day_block_0.0100": {
+    "terminal_percentiles_usd": [
+      73953.22361267525,
+      85208.32662228867,
+      102869.1397938982
+    ],
+    "annual_return_percentiles_pct": [
+      -26.046776387324737,
+      -14.791673377711334,
+      2.8691397938981953
+    ],
+    "sharpe_percentiles": [
+      -3.458591121649386,
+      -1.4257091262084072,
+      0.27855932962629476
+    ],
+    "maxDD_percentiles_pct": [
+      10.441954993763433,
+      19.147906425668772,
+      27.55644992117518
+    ],
+    "drawdown_duration_percentiles_business_days": [
+      118.0,
+      235.0,
+      252.0
+    ],
+    "longest_losing_streak_percentiles": [
+      5.0,
+      8.0,
+      14.0
+    ],
+    "losing_21_day_buckets_percentiles": [
+      6.0,
+      8.0,
+      11.0
+    ]
+  }
+}

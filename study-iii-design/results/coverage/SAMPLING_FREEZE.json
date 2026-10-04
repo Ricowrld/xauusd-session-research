@@ -1,0 +1,10 @@
+{
+  "seed": 20261005,
+  "sample_rows": 32,
+  "sample_sha256": "8049fc4e3fb80835608a99ccab8a14b6a3b39d6c66ac3270ff2876661795a804",
+  "sampling": "uniform hours within year/session strata; unweighted diagnostic",
+  "registered_before_requery": true,
+  "source_files_verified": 2922,
+  "source_complete_candles": 2789384,
+  "holdout_accessed": false
+}

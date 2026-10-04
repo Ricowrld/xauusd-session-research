@@ -1,0 +1,19 @@
+{
+  "provider": "OANDA v20 practice endpoint",
+  "instrument": "XAU_USD",
+  "granularity": "M1",
+  "price_sides": "bid and ask",
+  "requested_period": [
+    "2016-01-01",
+    "2023-12-31"
+  ],
+  "calendar_files": 2922,
+  "complete_candles": 2789384,
+  "empty_calendar_days": 439,
+  "incomplete_candles": 0,
+  "source_bytes": 575313674,
+  "hash_verified_files": 2922,
+  "credential_material_recorded": false,
+  "holdout_files": 0,
+  "inventory_sha256": "3a7268fd049c4123b4d9a12e9382284ed79da05b077dd5ef68bf792b3f8a20e2"
+}

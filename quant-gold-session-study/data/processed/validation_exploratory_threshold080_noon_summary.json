@@ -1,0 +1,9 @@
+{
+  "N": 140,
+  "expectancy_R": 0.1788903812716026,
+  "block_bootstrap_95CI": [
+    -0.18182179417614178,
+    0.5608116199215795
+  ],
+  "status": "Validation sensitivity cell selected after outcomes known; exploratory only"
+}

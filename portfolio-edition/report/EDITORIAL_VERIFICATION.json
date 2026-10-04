@@ -1,0 +1,72 @@
+{
+  "pages": 25,
+  "single_named_reference_acknowledgement": true,
+  "no_strategy_name_on_cover": true,
+  "no_strategy_name_in_cv": true,
+  "original_bundle_verified_files": 101,
+  "original_bundle_checksum_mismatches": [],
+  "detailed_numeric_tokens_identical_pages": [
+    4,
+    5,
+    6,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "numeric_token_difference_pages": [
+    7
+  ],
+  "figures": [
+    {
+      "file": "annual_R.png",
+      "identical": true
+    },
+    {
+      "file": "compression_london.png",
+      "identical": true
+    },
+    {
+      "file": "monte_carlo_equity.png",
+      "identical": true
+    },
+    {
+      "file": "validation_drawdown.png",
+      "identical": true
+    },
+    {
+      "file": "worked_trade.png",
+      "identical": true
+    }
+  ],
+  "original_pdf_and_bundle_fingerprints_unchanged": true,
+  "visual_review": "All 25 pages rendered and inspected in two contact sheets; edited summary, clocks, acknowledgement and conclusion inspected individually",
+  "holdout_files_study_i": 0,
+  "holdout_files_study_ii": 0,
+  "page_7_numeric_difference": {
+    "tokens": [
+      {
+        "operation": "delete",
+        "before": [
+          "1"
+        ],
+        "after": []
+      }
+    ],
+    "explanation": "Removal of the conversational phase-1-only prompt-history sentence; no empirical number changed."
+  }
+}

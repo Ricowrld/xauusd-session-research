@@ -1,0 +1,32 @@
+{
+  "probes": [
+    {
+      "name": "legacy_candle",
+      "url": "https://datafeed.dukascopy.com/datafeed/XAUUSD/2016/00/04/BID_candles_min_1.bi5",
+      "http_status": 429,
+      "bytes": 113,
+      "sha256": "00263559f89985697555da4ae87977c2fb2fd72858dd9ca6d4415c168f2594d4",
+      "retrieved_utc": "2026-10-04T23:17:11.052888+00:00",
+      "retry_after": null,
+      "price_results_evaluated": false,
+      "public_provider_transport": true,
+      "automatic_retry": false
+    },
+    {
+      "name": "provider_json",
+      "url": "https://jetta.dukascopy.com/v1/candles/minute/XAUUSD/BID/2016/1/4",
+      "http_status": 429,
+      "bytes": 113,
+      "sha256": "00263559f89985697555da4ae87977c2fb2fd72858dd9ca6d4415c168f2594d4",
+      "retrieved_utc": "2026-10-04T23:17:11.135646+00:00",
+      "retry_after": null,
+      "price_results_evaluated": false,
+      "public_provider_transport": true,
+      "automatic_retry": false
+    }
+  ],
+  "new_independent_feed_acquired": false,
+  "holdout_accessed": false,
+  "bulk_acquisition_performed": false,
+  "capacity_stop": "Primary requirement exceeds even generous pre-2024 date capacity; no claim that a feed alone solves this."
+}

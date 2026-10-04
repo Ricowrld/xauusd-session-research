@@ -1,0 +1,18 @@
+{
+  "client_date": "2026-10-04",
+  "git_commit": "e066e53c81d080dad09d6a764a32ff5ee283b837",
+  "config_version": "gold-coil-v1",
+  "files_sha256": {
+    "src\\addendum.py": "fd8069f6fe613742f246a4fd73b95617af9a956c1509edb0a64d38da43d5b31d",
+    "src\\download.py": "d6305f75b39af7d615486588abc845ec4d163362e63030806e421622a0c653b0",
+    "src\\freeze.py": "52cf746411c8869510425f3f805a694c1a078289b5bec413bf3c81507ec53094",
+    "src\\report.py": "a50849a23b1232a5a3d07dbded6c78a71c03b33c5722f265a016da009a7b08ae",
+    "src\\robustness.py": "64bbc7d114e13249e8b7638d22eb77984642f1d38bd97fa00dc29f7188de2a26",
+    "src\\study.py": "ceaa0bd818f3b2c69cc281b05fdd1aa2981bb3ed274504cb7ddd70229beecf43",
+    "configs\\study.json": "28fca31ef4bd3dfaef201a7c4efaa97131883181cf9e9159086710d50b4a0f91",
+    "experiments\\PREREGISTRATION.md": "b08c8e27edc5dd4122f11a589f3a81cfbf9baa09f1e1f496faf6627e75f36131"
+  },
+  "tests_passed": true,
+  "strategy_gate": "No new strategy authorized by evidence: H1-H6 do not pass; two externally specified diagnostic benchmarks only",
+  "expected_outcomes": "Expect no reliable positive net expectancy from either benchmark, based on development/validation. Holdout could differ under changed gold regimes. No threshold, clock or cost changes permitted after viewing. Holdout cannot establish original-feed authenticity or replace missing event calendar."
+}

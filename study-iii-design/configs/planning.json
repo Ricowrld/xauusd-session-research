@@ -1,0 +1,19 @@
+{
+  "client_date": "2026-10-05",
+  "seed": 20261005,
+  "pilot_forecast_ledger": "../gold-session-study-ii/results/oanda/forecast_ledger.csv",
+  "primary_comparison": ["har_baseline", "har_enhanced"],
+  "effect_sizes": [0.01, 0.03, 0.05, 0.08, 0.10],
+  "power_targets": [0.8, 0.9],
+  "primary_effect": 0.05,
+  "primary_power": 0.9,
+  "one_sided_alpha": 0.025,
+  "hac_lags": [0, 5, 10, 20, 60],
+  "blocks": [5, 10, 20],
+  "lrv_bootstrap_replicates": 2000,
+  "lrv_upper_quantile": 0.95,
+  "variance_transport_multiplier": 1.5,
+  "power_simulation_replicates": 20000,
+  "holdout_first_forbidden_date": "2024-01-01",
+  "confirmation_outcomes_acquired": false
+}
