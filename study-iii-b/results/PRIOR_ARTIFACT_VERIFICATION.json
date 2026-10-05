@@ -1,0 +1,11 @@
+{
+  "prior_baseline_files": 136,
+  "permanent_study_ii_files": 54,
+  "original_m1_responses_verified": 2922,
+  "native_m5_responses_verified": 2922,
+  "all_prior_artifacts_unchanged": true,
+  "all_request_bounds_2016_2023": true,
+  "pre2016_acquired": false,
+  "holdout_accessed": false,
+  "trades_run": false
+}

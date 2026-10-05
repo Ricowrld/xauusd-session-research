@@ -1,0 +1,25 @@
+{
+  "outer_replicates_per_cell": 500,
+  "inner_bootstrap_draws": 1999,
+  "dgp_blocks": [
+    5,
+    10,
+    20
+  ],
+  "scored_grid": [
+    250,
+    500,
+    1000,
+    2000,
+    4000,
+    8000
+  ],
+  "training_rows": 400,
+  "burn_in": 500,
+  "elapsed_seconds": 507.00057888031006,
+  "market_data_period": "2016-2023 already viewed only",
+  "holdout_accessed": false,
+  "trades_run": false,
+  "old_design_modified": false,
+  "calibration_targets_unavailable": []
+}

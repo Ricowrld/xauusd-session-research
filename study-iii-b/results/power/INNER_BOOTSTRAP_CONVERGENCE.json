@@ -1,0 +1,21 @@
+{
+  "scored_n": 4000,
+  "replicates": 500,
+  "power": 0.942,
+  "power_mc_lower": 0.917943812143745,
+  "power_mc_upper": 0.9593162708882429,
+  "joint_power": 0.942,
+  "joint_mc_lower": 0.917943812143745,
+  "joint_mc_upper": 0.9593162708882429,
+  "hac20_rejection": 0.944,
+  "achieved_effect_mean": 0.04716621905964014,
+  "achieved_effect_median": 0.04725512516765301,
+  "achieved_effect_p05": 0.025119214145405758,
+  "achieved_effect_p95": 0.07213763386317196,
+  "achieved_effect_mc_se": 0.0006617491847178638,
+  "positive_asia_coefficient": 1.0,
+  "nonpositive_achieved_effect": 0.004,
+  "dgp_block": 10,
+  "target_effect": 0.05,
+  "bootstrap_draws": 10000
+}

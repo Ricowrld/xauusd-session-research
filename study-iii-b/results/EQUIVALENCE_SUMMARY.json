@@ -1,0 +1,26 @@
+{
+  "source_days": 2922,
+  "native_bars": 566434,
+  "complete_m1_blocks": 535892,
+  "timestamp_global": {
+    "year": 0,
+    "native_m5": 566434,
+    "complete_m1_blocks": 535892,
+    "matched_complete_blocks": 535892,
+    "complete_m1_not_native": 0,
+    "native_with_partial_m1": 30542,
+    "native_without_any_m1": 0
+  },
+  "gates": {
+    "timestamp_containment": true,
+    "bid_ask_and_mid_endpoints": true,
+    "same_edge_rv": true,
+    "complete_block_volume": true
+  },
+  "all_numerical_gates_pass": true,
+  "native_flagged_bars": 1089,
+  "true_reconstructed_midpoint_high_low_available": false,
+  "trades_run": false,
+  "holdout_accessed": false,
+  "pre2016_acquired": false
+}

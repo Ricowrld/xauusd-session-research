@@ -1,0 +1,4 @@
+session,n,mean,median_abs,p95_abs,p99_abs,max_abs,exact_fraction,within_001_fraction
+asia,1113,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+daily,1429,0.0,0.0,0.0,0.0,0.0,1.0,1.0
+london,1659,0.0,0.0,0.0,0.0,0.0,1.0,1.0

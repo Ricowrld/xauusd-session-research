@@ -1,0 +1,13 @@
+session,frozen_valid,native_valid,dates
+asia,False,False,44
+asia,False,True,929
+asia,True,False,0
+asia,True,True,1113
+daily,False,False,142
+daily,False,True,515
+daily,True,False,0
+daily,True,True,1429
+london,False,False,41
+london,False,True,386
+london,True,False,0
+london,True,True,1659

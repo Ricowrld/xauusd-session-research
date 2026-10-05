@@ -1,0 +1,10 @@
+{
+  "block": 20,
+  "target_effect": 0.0,
+  "multiplier": 0.0,
+  "note": "Zero direct Asia channel; operational null",
+  "synthetic_london_log_lag1": 0.7275518913033624,
+  "synthetic_asia_log_lag1": 0.5886582806906901,
+  "fitted_asia_coef_mean": -0.002128535222237806,
+  "fitted_asia_coef_sd": 0.05025357105215163
+}

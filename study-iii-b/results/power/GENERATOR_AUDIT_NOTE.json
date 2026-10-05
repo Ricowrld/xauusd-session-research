@@ -1,0 +1,5 @@
+{
+  "status": "Post-run diagnostic, not a change to preregistered simulation",
+  "reason": "Check whether independently generated session primitives respect UTC daily RV containment",
+  "interpretation": "The stationary reduced-form DGP is not an intraday price-path generator. Ordering failures limit physical realism; no paths are filtered and no primary power results replaced."
+}

@@ -21,6 +21,15 @@ about subsequent London realised variance beyond a HAR-style volatility baseline
   32,001 scored forecasts for the 90% planning target. Sensitivities are included.
   The primary planned older-history window cannot supply that many unique dates;
   Study III forecast evaluation and its trading translation have not begun.
+- Study III-B audits native unsmoothed OANDA M5 on already-viewed 2016-2023.
+  All 535,892 complete-M1 blocks match native bid/ask OHLC and price counts exactly.
+  Native M5 adds 30,542 sparse bars but no extra price-count mass; it is conditionally
+  defensible as a new within-feed RV source, not recovered ticks or independent-feed
+  confirmation. Previous studies and the Design Pack remain unchanged.
+- The separate full train/freeze/forecast simulation estimates 93.2-95.2% power at
+  4,000 scored synthetic observations for a calibrated 5% effect target. Achieved
+  gains are 4.64-4.76%. Operational-null and generator-coherence limitations prevent
+  adopting this as a new sample-size requirement; the frozen 32,001 remains intact.
 - All 2024+ data remains locked. No C++ or MT5 EA work is underway.
 
 ## Read the evidence
@@ -33,6 +42,15 @@ registered confirmation specification. The completed 11-page Design Pack is
 `research-archive/Gold-Session-Study-II/PERMANENT_FREEZE.json` records the immutable
 report/bundle and research-file hashes. A separate timestamp-gap correction to
 Study I is documented without rewriting its historical report.
+
+The completed Study III-B reports are available here:
+
+- [Native M5 equivalence and coverage](study-iii-b/output/pdf/Study_III_B_Native_M5_Equivalence_Coverage_Report.pdf)
+- [Full-procedure power analysis](study-iii-b/output/pdf/Study_III_B_Full_Procedure_Power_Report.pdf)
+- [Research bundle](study-iii-b/output/Study_III_B_Research_Bundle.zip)
+
+The [Study III-B README](study-iii-b/README.md) documents reproduction and limitations.
+No pre-2016 outcomes, 2024+ data or trading strategy were used in this phase.
 
 ## Reproducibility and privacy
 

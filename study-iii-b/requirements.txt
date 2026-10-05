@@ -1,0 +1,9 @@
+numpy
+pandas
+scipy
+requests
+pyarrow
+matplotlib
+reportlab
+pypdf
+pillow

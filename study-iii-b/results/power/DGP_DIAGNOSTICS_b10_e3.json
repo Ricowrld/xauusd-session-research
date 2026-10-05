@@ -1,0 +1,10 @@
+{
+  "block": 10,
+  "target_effect": 0.05,
+  "multiplier": 0.6707112391365092,
+  "note": "Interpolated long-training calibration, not guaranteed 400-row achieved effect",
+  "synthetic_london_log_lag1": 0.7493832803807663,
+  "synthetic_asia_log_lag1": 0.6765981173732458,
+  "fitted_asia_coef_mean": 0.22093957681324014,
+  "fitted_asia_coef_sd": 0.04668843464977876
+}

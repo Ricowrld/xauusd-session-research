@@ -1,0 +1,9 @@
+{
+  "dates": 2922,
+  "complete_candles": 566434,
+  "incomplete_candles": 0,
+  "empty_dates": 439,
+  "bytes": 155880589,
+  "holdout_accessed": false,
+  "fresh_pre2016_acquired": false
+}

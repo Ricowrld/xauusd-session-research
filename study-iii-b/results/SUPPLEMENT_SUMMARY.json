@@ -1,0 +1,33 @@
+{
+  "all_years_pass": true,
+  "all_received_m1_side_ohlc_exact": true,
+  "all_native_price_count_equals_received_m1": true,
+  "missing_constituent_minutes_inside_native_bars": 42786,
+  "native_without_any_m1": 0,
+  "midpoint_extrema_geometry": {
+    "h_outside_side_bounds": 0,
+    "h_diff_from_side_extrema_average": {
+      "n": 566434,
+      "mean": -0.014577794588602078,
+      "median_abs": 0.0015000000000782165,
+      "p95_abs": 0.03850000000011278,
+      "p99_abs": 0.2744999999999891,
+      "max_abs": 3.5914999999999964,
+      "exact_fraction": 0.35407125984668997,
+      "within_001_fraction": 0.4915347595659865
+    },
+    "l_outside_side_bounds": 0,
+    "l_diff_from_side_extrema_average": {
+      "n": 566434,
+      "mean": 0.014365483886914034,
+      "median_abs": 0.0014999999998508429,
+      "p95_abs": 0.03850000000011278,
+      "p99_abs": 0.2699999999999818,
+      "max_abs": 3.252999999999929,
+      "exact_fraction": 0.3585483922222183,
+      "within_001_fraction": 0.493881017029345
+    }
+  },
+  "no_claim_of_recovered_ticks": true,
+  "no_claim_that_missing_m1_proves_no_market_quotes": true
+}

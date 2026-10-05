@@ -1,0 +1,35 @@
+{
+  "source_commit": "004768a77c17021b3e46139a94ebef6945b0ad5f",
+  "bundle": "Study_III_B_Research_Bundle.zip",
+  "bundle_sha256": "489556b192b427df182c18501f454b77d2446e67f5c5ab0727e723d9decc6c56",
+  "bundle_bytes": 4028086,
+  "bundle_members": 81,
+  "credential_exact_value_scan": true,
+  "credential_material_included": false,
+  "raw_provider_data_included": false,
+  "reports": [
+    {
+      "file": "Study_III_B_Full_Procedure_Power_Report.pdf",
+      "pages": 8,
+      "sha256": "b29f3dd14b6bb111c659c351c1926fda9595bfe640ce0db2d52f9ffa99425939",
+      "all_pages_rendered_and_visually_reviewed": true
+    },
+    {
+      "file": "Study_III_B_Native_M5_Equivalence_Coverage_Report.pdf",
+      "pages": 8,
+      "sha256": "e0487d16c6c1a9b2aef91ecf2b2dec984f33f25ca3e88a911351fc55d8a40680",
+      "all_pages_rendered_and_visually_reviewed": true
+    }
+  ],
+  "scope_verification": {
+    "prior_baseline_files": 136,
+    "permanent_study_ii_files": 54,
+    "original_m1_responses_verified": 2922,
+    "native_m5_responses_verified": 2922,
+    "all_prior_artifacts_unchanged": true,
+    "all_request_bounds_2016_2023": true,
+    "pre2016_acquired": false,
+    "holdout_accessed": false,
+    "trades_run": false
+  }
+}
