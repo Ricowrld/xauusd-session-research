@@ -1,0 +1,22 @@
+{
+  "window": [
+    "1999-01-01",
+    "2016-01-01 exclusive"
+  ],
+  "request_windows": 444,
+  "empty_windows": 188,
+  "complete_candles": 702729,
+  "first_candle": "2006-03-19 20:25:00+00:00",
+  "last_candle": "2015-12-31 23:00:00+00:00",
+  "training_reserved": 400,
+  "potential_scored_upper_bound": 1975,
+  "required_scored": 4000,
+  "capacity_upper_bound_sufficient": false,
+  "interpretation": "Coverage-only upper bound; price flags and positive RV intentionally unevaluated",
+  "fresh_price_payload_downloaded_and_quarantined": true,
+  "fresh_prices_exported": false,
+  "fresh_rv_computed": false,
+  "fresh_forecast_outcomes_evaluated": false,
+  "holdout_accessed": false,
+  "trades_run": false
+}

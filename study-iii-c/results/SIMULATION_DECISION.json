@@ -1,0 +1,14 @@
+{
+  "candidate_n": 4000,
+  "training_n": 400,
+  "target_effect": 0.05,
+  "containment_violations": 0,
+  "null_gate_pass": true,
+  "power_gate_pass": true,
+  "simulation_basis_pass": true,
+  "critical_value_n4000": 1.959963984540054,
+  "old_design_modified": false,
+  "empirical_confirmation_run": false,
+  "availability_audit_pending": true,
+  "elapsed_seconds": 167.97275185585022
+}

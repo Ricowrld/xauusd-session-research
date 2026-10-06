@@ -1,0 +1,12 @@
+candidate,start_assumption,end_exclusive,calendar_weekdays,loose_scored_ceiling_reserve_400,ideal_screen_reserve_20_features_and_400_training,required_scores,loose_calendar_screen_pass,interpretation
+Olsen research sample,1987-01-01,2016-01-01,7566,7166,7146,4000,True,"Historical research evidence, not licensed continuous availability"
+LSEG archive envelope,1996-01-01,2016-01-01,5219,4819,4799,4000,True,General archive envelope; XAU-specific start unverified
+Tickdatamarket XAU quote listing,1998-08-01,2016-01-01,4544,4144,4124,4000,True,First day of listed month assumed optimistically
+Original Design Pack window,1999-01-01,2016-01-01,4435,4035,4015,4000,True,Calendar window; not a provider claim
+Any history starting in 2000,2000-01-01,2016-01-01,4174,3774,3754,4000,False,Calendar exclusion screen
+Dukascopy minute metadata,2003-05-05,2016-01-01,3304,2904,2884,4000,False,Official instrument metadata
+Tick Data spot envelope,2008-05-01,2016-01-01,2001,1601,1581,4000,False,General spot product start; instrument coverage unverified
+HistData catalog envelope,2009-01-01,2016-01-01,1826,1426,1406,4000,False,January assumed optimistically for earliest listed year
+Tick Data GC quote start,2010-01-01,2016-01-01,1565,1165,1145,4000,False,January assumed; different market
+Tick Data GC trade start,1984-01-01,2016-01-01,8349,7949,7929,4000,True,Different market and observation type
+Portara combined intraday listing,1987-09-03,2016-01-01,7391,6991,6971,4000,True,Different market; early pit data includes no proved Asia coverage

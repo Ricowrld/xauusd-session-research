@@ -1,0 +1,14 @@
+{
+  "source_commit": "25353c18e3be06650b48327fc3c44394f46fb500",
+  "bundle": "Study_III_C_Research_Bundle.zip",
+  "sha256": "81478242e467ff36d9385976b3dbd598e0b64c0801760b7b6553609b2a5c3688",
+  "bytes": 9635727,
+  "members": 42,
+  "pdf": "Study_III_C_Coherent_Power_and_Historical_Capacity_Report.pdf",
+  "pdf_sha256": "bdc0ae2735b738ec364a9ed7341e41e760d92d90a2ce37dcb940f0ac77b22f38",
+  "credential_scan_pass": true,
+  "raw_data_included": false,
+  "fresh_forecast_outcomes_evaluated": false,
+  "holdout_accessed": false,
+  "predecessor_hashes_verified": 220
+}

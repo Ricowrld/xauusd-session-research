@@ -1,0 +1,15 @@
+{
+  "status": "Simulation basis passes; fresh OANDA historical capacity fails; no empirical confirmation",
+  "simulation_basis_pass": true,
+  "designated_scored_n": 4000,
+  "training_n": 400,
+  "coverage_only_scored_upper_bound": 1975,
+  "shortfall": 2025,
+  "empirical_feasibility_pass": false,
+  "empirical_confirmation_run": false,
+  "fresh_prices_downloaded_only_to_quarantine": true,
+  "fresh_forecast_outcomes_evaluated": false,
+  "holdout_accessed": false,
+  "trades_run": false,
+  "frozen_predecessors_modified": false
+}

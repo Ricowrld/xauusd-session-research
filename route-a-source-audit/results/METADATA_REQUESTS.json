@@ -1,0 +1,68 @@
+[
+  {
+    "label": "dukascopy_instruments",
+    "url": "https://freeserv.dukascopy.com/2.0/index.php?path=common%2Finstruments",
+    "retrieved_utc": "2026-10-06T18:05:36.909207+00:00",
+    "kind": "metadata or catalog only",
+    "retry_count": 0,
+    "status": 200,
+    "bytes": 1040559,
+    "sha256": "988460387c130b47ebde05c62f5a4b2229c85842d193e1a235f429a819a4a995",
+    "content_type": "text/javascript; charset=UTF-8",
+    "redirect": "",
+    "xau_metadata": [
+      {
+        "title": "XAU/USD",
+        "name": "XAU/USD",
+        "description": "Spot gold",
+        "history_start_tick": "1052092863421",
+        "history_start_10sec": "1406309540000",
+        "history_start_60sec": "1052092860000",
+        "history_start_60min": "1052092800000",
+        "history_start_day": "0"
+      },
+      {
+        "title": "XAU/USD",
+        "name": "XAU/USD",
+        "description": "Spot gold",
+        "history_start_tick": "1052092863421",
+        "history_start_10sec": "1406309540000",
+        "history_start_60sec": "1052092860000",
+        "history_start_60min": "1052092800000",
+        "history_start_day": "0"
+      }
+    ]
+  },
+  {
+    "label": "dukascopy_history_start",
+    "url": "https://datafeed.dukascopy.com/datafeed/metadata/HistoryStart.bi5",
+    "retrieved_utc": "2026-10-06T18:05:37.350193+00:00",
+    "kind": "metadata or catalog only",
+    "retry_count": 0,
+    "error_type": "ConnectTimeout"
+  },
+  {
+    "label": "histdata_catalog",
+    "url": "https://www.histdata.com/download-free-forex-historical-data/?/ascii/1-minute-bar-quotes/xauusd",
+    "retrieved_utc": "2026-10-06T18:05:47.373312+00:00",
+    "kind": "metadata or catalog only",
+    "retry_count": 0,
+    "status": 200,
+    "bytes": 36749,
+    "sha256": "1a5946057f378d2c761f3ac687d36d561d76847f5917da09026e299afa4ef5bb",
+    "content_type": "text/html; charset=UTF-8",
+    "redirect": ""
+  },
+  {
+    "label": "histdata_tick_catalog",
+    "url": "https://www.histdata.com/download-free-forex-historical-data/?/ascii/tick-data-quotes/xauusd",
+    "retrieved_utc": "2026-10-06T18:08:08.477582+00:00",
+    "kind": "metadata or catalog only",
+    "retry_count": 0,
+    "status": 200,
+    "bytes": 33934,
+    "sha256": "ec68b81613c1b3595f4b3a5bb60c8b5a53324af9be8b2f3aadb559c828372f0f",
+    "content_type": "text/html; charset=UTF-8",
+    "redirect": ""
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "block": 10,
+  "target_effect": 0.05,
+  "n": 4000,
+  "draws": 10000,
+  "old_percentile_rule_rate": 0.933,
+  "new_calibrated_rule_rate": 0.929
+}

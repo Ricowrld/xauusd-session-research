@@ -1,0 +1,27 @@
+{
+  "description": "Route A source audit: public references and metadata summaries; no price data",
+  "files": {
+    ".gitattributes": "6a6cc4abbc1dba3012d2e0fc5ba1e66338d29cbe3591648d81bd8f6df2533c1b",
+    ".gitignore": "4e344934360dba7426c471a663b72efb45723c588ef22bf3b4bfd9952e0cdca0",
+    "evidence/SOURCES.json": "0590e275529afe7d5769762b91837b7ef1781ac1cd990881d3329ea3c45e54ca",
+    "output/pdf/Route_A_Historical_Gold_Source_Feasibility_Report.pdf": "920ff2a95ea47a3bc4de4ca503be5d5c055e3196d617e436e018c1a1552630e8",
+    "protocol/PRIOR_HASHES.json": "279322376056c3ddd68a8399df1d22470d263a1a16e9f44a4879c9eb9551e49a",
+    "protocol/SCOPE.md": "84178b2c0b6d9b064ddd05bf26acc43a5a0f3942772be0b4a17b9cc53f81f8b4",
+    "PROVIDER_REQUEST.md": "d8c9168f493f0ab51e2e9baa3bd51ab9ec60c0fb9d8dcd4d2cf50cb9690d42ba",
+    "README.md": "4b107e7a6c221902b757714010335ad653c372acb05a4f824a8945aec59b5d1c",
+    "results/CALENDAR_CAPACITY.csv": "3a37e3de3adefe5530a9460f5000cb51ce5a7a6d7cf7a946f094b97fd480fb9f",
+    "results/DECISION.json": "28b79c8a26c1df5bf7f70816d734106caee765730e7bff2a00dec1e8b177a24b",
+    "results/DUKASCOPY_XAU_METADATA.json": "d212bba7d16e9895a7ba16e63c32dc7f359afded1d5d2087a95ee8eaeaaf9321",
+    "results/figures/calendar_capacity.png": "22739302c1e4db5236c27facb625026997bfc14dc4f845d13c2ad98963bf5bc7",
+    "results/HISTDATA_CATALOGS.json": "e9101cd47e9fe030ae6852d2bbf42e3f7a0f1fa61969f52e4b44b0fbed0690b2",
+    "results/INTEGRITY.json": "31af761c93658faf06d31df1330326438599ecb8be5ea075ea06241973764c54",
+    "results/METADATA_REQUESTS.json": "f0060710b541629609f18a1f6c5b41ff2ff025326f50b8991dca46b599d807f4",
+    "results/REPORT_TEXT_CHECK.json": "7ca12a9560c1c2af8c54da71e769ac59b0d2a8f714a5270e2a6c1e85141de3de",
+    "results/SOURCE_MATRIX.csv": "22b7efb3bc738ae3762b1ab36c680e55baa7d434b5ff7b1c522e039911ecb64c",
+    "results/VALIDATION.json": "ee192b708c678c8cc3cc7e44a0a3655c24ac2162788ae2ea9bb2e6abeb1176e2",
+    "src/audit.py": "d5b794df4fe8bc37ead989d34498680871e7f7d79547faf47b4fc3448346db8f",
+    "src/metadata_probe.py": "fb7e8c3cfa5f2ceb0ed11596784020249ddcad4c04842e36cffec41aef619797",
+    "src/package.py": "4275dfdf6c4f9a6f7b42271c33fc78319d63702ece03d7df180fc370908fda81",
+    "src/report.py": "3b69c5bc42829561d643d72370e5fd689bcb3b3c401511baf25c8d843a212fe3"
+  }
+}

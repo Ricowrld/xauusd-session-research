@@ -1,0 +1,108 @@
+[
+  {
+    "id": "S01", "provider": "Olsen", "market": "Spot XAU/USD (historical research sample)",
+    "start_basis": "Primary research documents XAU/USD sample January 1987-December 1995; not current instrument inventory",
+    "start": "1987-01-01", "evidence_level": "Primary research plus official product documentation",
+    "access": "Commercial or institutional licence; no account/access verified",
+    "decision": "Spot candidate, not qualified", "unresolved": "Current XAU/USD availability, continuous pre-2016 quote inventory, timestamp conventions, quote age, contributor provenance, licence and single-instrument quote",
+    "finding": "The provider-hosted book analyses intraday XAU/USD in 1987-1995 (Table 5.7, printed p.151, PDF p.171) and quote activity in 1987-1993 (Table 5.10, printed p.167, PDF p.187). Historical data products include quotes and 1-60 minute bars. This supports existence of old research data, not today's delivery or session completeness.",
+    "references": [
+      {"title":"Dacorogna et al., An Introduction to High Frequency Finance, Tables 5.7 and 5.10", "url":"https://olsendata.com/res/Publications/Book/hffbook.pdf", "locator":"Printed pp.151 and 167; PDF pp.171 and 187"},
+      {"title":"OlsenData historical data", "url":"https://www.olsendata.com/data_products/historical_data/"},
+      {"title":"OlsenData data package", "url":"https://www.olsendata.com/data_products/data_package/"}
+    ], "checked_date":"2026-10-06"
+  },
+  {
+    "id": "S02", "provider": "LSEG Tick History", "market": "Global archive; exact spot-gold series unverified",
+    "start_basis": "Global Level 1/2 archive envelope January 1996, not XAU instrument start",
+    "start":"1996-01-01", "evidence_level":"Official product and API documentation",
+    "access":"Tick History entitlement/account required; provider advertises trial request, not guaranteed free historical dataset",
+    "decision":"Spot candidate, not qualified", "unresolved":"Exact XAU/USD instrument identifiers and quote-field start dates, contributor coverage, completeness and licence",
+    "finding":"The archive reaches January 1996 in general. That envelope has calendar room for the design, but the public page does not establish XAU/USD bid/ask coverage. API access at no additional cost applies to existing Tick History clients.",
+    "references":[
+      {"title":"LSEG Tick History product and FAQ", "url":"https://www.lseg.com/en/data-analytics/market-data/data-feeds/tick-history"},
+      {"title":"LSEG Tick History REST API access", "url":"https://developers.lseg.com/en/api-catalog/refinitiv-tick-history/refinitiv-tick-history-rth-rest-api"},
+      {"title":"Request Tick History time and sales using Python", "url":"https://developers.lseg.com/en/article-catalog/article/request-tick-history-time-and-sales-data-using-python"}
+    ], "checked_date":"2026-10-06"
+  },
+  {
+    "id":"S03", "provider":"Tickdatamarket (Systrade)", "market":"Spot XAU-USD",
+    "start_basis":"Official XAU-USD row lists August 1998 for tick, ask/bid and minute ask/bid formats",
+    "start":"1998-08-01", "evidence_level":"Instrument-specific provider catalog, not audited files",
+    "access":"Commercial order; no account, quote or licence verified",
+    "decision":"Spot candidate with narrow calendar margin", "unresolved":"Day-level inventory, exact first date, complete Asia/London sessions, supplier independence, stale quotes, current delivery and licence terms",
+    "finding":"The spot catalog specifically lists XAU-USD bid/ask and minute quote formats from August 1998. Assuming the first of that month gives a loose 4,144-score ceiling; 20 initial feature dates reduce the ideal screen to 4,124. Actual market holidays and quality exclusions consume the small margin. Its licence page exposed no usable terms in the retrieved text.",
+    "references":[
+      {"title":"Tickdatamarket spot instrument availability", "url":"https://www.tickdatamarket.com/forex.php"},
+      {"title":"Tickdatamarket minute ask/bid format", "url":"https://www.tickdatamarket.com/formats-donnees.php?id=31&nom=minute-ask-bid-bar"},
+      {"title":"Tickdatamarket licence page", "url":"https://www.tickdatamarket.com/licence.php"}
+    ], "checked_date":"2026-10-06"
+  },
+  {
+    "id":"S04", "provider":"Dukascopy", "market":"Spot XAU/USD",
+    "start_basis":"Direct official instrument metadata, Unix milliseconds; minute start 2003-05-05 00:01 UTC",
+    "start":"2003-05-05", "evidence_level":"Provider HTTP 200 metadata; response hash retained",
+    "access":"Public metadata reachable; binary HistoryStart metadata timed out; old candle probes previously 429",
+    "decision":"Advertised intraday history insufficient", "unresolved":"Exact session quality unnecessary for calendar rejection; direct metadata not a downloaded candle inventory",
+    "finding":"Official instrument fields history_start_tick and history_start_60sec decode to 2003-05-05 00:01:03.421 UTC and 00:01 UTC. With 3,304 possible weekdays before 2016, reserving 400 training dates leaves at most 2,904 scores. The daily metadata field is zero and is treated as unspecified, not as 1970 or a verified 1999 daily start. No price endpoint was requested.",
+    "references":[
+      {"title":"Dukascopy official instrument metadata endpoint", "url":"https://freeserv.dukascopy.com/2.0/index.php?path=common%2Finstruments", "locator":"XAU/USD history_start_60sec; HTTP 200 direct client on 06 October 2026; web-reader access separately returned 403"},
+      {"title":"Dukascopy historical data API documentation", "url":"https://www.dukascopy.com/wiki/en/development/strategy-api/historical-data/"}
+    ], "checked_date":"2026-10-06"
+  },
+  {
+    "id":"S05", "provider":"HistData", "market":"XAU/USD",
+    "start_basis":"Direct official XAU/USD M1 and tick catalog links; earliest listed year 2009",
+    "start":"2009-01-01", "evidence_level":"Provider HTTP 200 catalogs; not downloaded price files",
+    "access":"Public catalog reachable; no archive downloaded",
+    "decision":"Listed history insufficient", "unresolved":"Undocumented older data not ruled out; source provenance unverified",
+    "finding":"Both XAU/USD catalogs list history no earlier than 2009. Even assuming January 1 gives at most 1,426 scores after training. Official FAQ says bar OHLC uses bid prices, ask is supplied in generic ASCII ticks, and timestamps use fixed EST without DST. M1 bid-only bars cannot directly reconstruct midpoint RV.",
+    "references":[
+      {"title":"HistData official XAU/USD M1 catalog", "url":"https://www.histdata.com/download-free-forex-historical-data/?/ascii/1-minute-bar-quotes/xauusd"},
+      {"title":"HistData official XAU/USD tick catalog", "url":"https://www.histdata.com/download-free-forex-historical-data/?/ascii/tick-data-quotes/xauusd"},
+      {"title":"HistData FAQ formats and timestamp conventions", "url":"https://www.histdata.com/f-a-q/"}
+    ], "checked_date":"2026-10-06"
+  },
+  {
+    "id":"S06", "provider":"Tick Data LLC - spot", "market":"Spot-FX product envelope; gold inclusion unverified",
+    "start_basis":"Official spot product starts May 1, 2008",
+    "start":"2008-05-01", "evidence_level":"Official product documentation",
+    "access":"Commercial; no dataset purchased",
+    "decision":"Published spot envelope insufficient", "unresolved":"XAU inclusion not established, and cannot improve this published envelope",
+    "finding":"The spot product advertises tick bid/ask quotes from May 1, 2008; prebuilt one-minute bars are bid based. Even this optimistic product-wide envelope gives only 1,601 scores before 2016 after training. It does not establish a longer gold-specific archive.",
+    "references":[{"title":"Tick Data historical spot Forex product", "url":"https://www.tickdata.com/product/historical-forex-data/"}], "checked_date":"2026-10-06"
+  },
+  {
+    "id":"S07", "provider":"Tick Data LLC - GC", "market":"COMEX gold futures",
+    "start_basis":"Official futures table: GC trades January 1984, quotes January 2010",
+    "start":"1984-01-01", "evidence_level":"Official instrument-specific futures availability, updated 17 February 2026",
+    "access":"Commercial; no data acquired",
+    "decision":"Different estimand; quote history also too short", "unresolved":"Historical electronic/pit session coverage, contract-level records, roll policy, and any earlier quote inventory",
+    "finding":"Gold futures trade records start much earlier than quotes. The quote envelope yields only 1,165 possible pre-2016 scores after training. The long trade archive is a futures/trade-price study lead, not evidence for spot midpoint RV or complete historical Asian sessions.",
+    "references":[{"title":"Tick Data available futures, GC row", "url":"https://www.tickdata.com/historical-market-data-products/futures-data/available-futures-data/"}], "checked_date":"2026-10-06"
+  },
+  {
+    "id":"S08", "provider":"Portara/CQG", "market":"Combined COMEX gold futures GCA/GC",
+    "start_basis":"Official intraday table September 3, 1987; product page also advertises Level 1 from that date",
+    "start":"1987-09-03", "evidence_level":"Instrument-specific provider claims; not file verified",
+    "access":"Commercial tailored purchase; no sample or full-history file downloaded",
+    "decision":"Different estimand; Asia coverage unresolved", "unresolved":"Earliest genuine two-sided quotes by field, old pit versus overnight coverage, historical session calendars, contract-roll mechanics",
+    "finding":"The provider lists intraday and Level 1 GC history from September 1987, but says its combined stream joins new all-session data to old pit data. That prevents inferring Asian-session availability from the advertised start. Field-level inventory is necessary; the quote-start claim is not independently verified and differs from Tick Data's product-specific quote envelope.",
+    "references":[
+      {"title":"Portara historical intraday table, GCA row", "url":"https://portaracqg.com/historical-intraday-futures-data/"},
+      {"title":"Portara GCA product and combined-series definition", "url":"https://portaracqg.com/futures/int/gca"}
+    ], "checked_date":"2026-10-06"
+  },
+  {
+    "id":"S09", "provider":"CME Group archival notices", "market":"COMEX metals session history",
+    "start_basis":"Documentary context, not a data source",
+    "start":"2006-12-04", "evidence_level":"Official 2006 exchange press releases",
+    "access":"Public documentation",
+    "decision":"Session-history caution", "unresolved":"Earlier ACCESS product calendars and provider capture completeness",
+    "finding":"Official November 2006 notices document gold moving from after-hours NYMEX ACCESS to side-by-side Globex for trade date December 4, 2006, with near-24-hour hours. This does not prove there was no earlier overnight gold trading; it requires checking historical calendars and actual captured quotes rather than back-projecting today's schedule.",
+    "references":[
+      {"title":"CME: NYMEX to offer COMEX metals side by side, 21 November 2006", "url":"https://www.cmegroup.com/media-room/press-releases/2006/11/21/nymex_to_offer_comexmetalssidebysideminysbeginningondecember3.html"},
+      {"title":"CME: hours and fees for side-by-side COMEX contracts, 29 November 2006", "url":"https://www.cmegroup.com/media-room/press-releases/2006/11/29/nymex_announces_hoursandfeesforsidebysidecomexmetalsfuturescontr.html"}
+    ], "checked_date":"2026-10-06"
+  }
+]

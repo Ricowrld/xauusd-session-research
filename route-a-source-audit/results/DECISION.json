@@ -1,0 +1,25 @@
+{
+  "status": "No accessible qualifying source verified; three commercial spot candidates require provider evidence",
+  "required_scores": 4000,
+  "training_reserved": 400,
+  "shortlisted_spot": [
+    "Olsen",
+    "LSEG Tick History",
+    "Tickdatamarket"
+  ],
+  "verified_sufficient_sources": 0,
+  "free_qualifying_sources_verified": 0,
+  "search_exhaustive": false,
+  "universal_infeasibility_proved": false,
+  "new_price_data_acquired": false,
+  "fresh_ohlc_inspected": false,
+  "fresh_rv_computed": false,
+  "fresh_forecasts_evaluated": false,
+  "holdout_accessed": false,
+  "strategy_run": false,
+  "provider_contacted": false,
+  "purchase_or_signup_made": false,
+  "prior_frozen_files_unchanged": true,
+  "search_date": "2026-10-06",
+  "budget_assumption": "No paid acquisition or external contact authorised for this phase"
+}

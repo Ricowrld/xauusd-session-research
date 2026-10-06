@@ -1,0 +1,36 @@
+[
+  {
+    "label": "histdata_catalog",
+    "url": "https://www.histdata.com/download-free-forex-historical-data/?/ascii/1-minute-bar-quotes/xauusd",
+    "response_sha256": "1a5946057f378d2c761f3ac687d36d561d76847f5917da09026e299afa4ef5bb",
+    "earliest_listed_year": 2009,
+    "pre2016_listed_years": [
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "market_prices_requested": false,
+    "interpretation": "Catalog availability only; no archive downloaded or coverage audited"
+  },
+  {
+    "label": "histdata_tick_catalog",
+    "url": "https://www.histdata.com/download-free-forex-historical-data/?/ascii/tick-data-quotes/xauusd",
+    "response_sha256": "ec68b81613c1b3595f4b3a5bb60c8b5a53324af9be8b2f3aadb559c828372f0f",
+    "earliest_listed_year": 2009,
+    "pre2016_listed_years": [
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015
+    ],
+    "market_prices_requested": false,
+    "interpretation": "Catalog availability only; no archive downloaded or coverage audited"
+  }
+]

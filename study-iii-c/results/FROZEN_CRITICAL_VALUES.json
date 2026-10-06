@@ -1,0 +1,13 @@
+{
+  "critical_values": {
+    "250": 1.959963984540054,
+    "500": 1.959963984540054,
+    "1000": 1.959963984540054,
+    "2000": 1.959963984540054,
+    "4000": 1.959963984540054,
+    "8000": 1.959963984540054
+  },
+  "calibration_paths_per_block": 2000,
+  "validation_opened": false,
+  "method": "Maximum 97.5% higher empirical quantile over blocks; minimum 1.959964"
+}

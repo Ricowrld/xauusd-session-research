@@ -1,0 +1,10 @@
+{
+  "output/pdf/Route_A_Historical_Gold_Source_Feasibility_Report.pdf": {
+    "sha256": "920ff2a95ea47a3bc4de4ca503be5d5c055e3196d617e436e018c1a1552630e8",
+    "bytes": 99037
+  },
+  "output/Route_A_Source_Feasibility_Bundle.zip": {
+    "sha256": "77caf9df7d0bc9582a95e65be6cbdc9eac6dd5562718969f457716c6f18ecdfd",
+    "bytes": 185775
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "status": "Conditional simulation design basis frozen before availability audit; empirical feasibility pending",
+  "scored_n": 4000,
+  "training_rows": 400,
+  "target_long_training_qlike_gain": 0.05,
+  "primary_statistic": "mean paired QLIKE gain / max exact circular-bootstrap SE for blocks 5,10,20",
+  "critical_value": 1.959963984540054,
+  "target_measurement": "Common-edge London M5 midpoint RV; UTC daily partition A+L+R",
+  "decision_rule": "All dependence cells pass preregistered null and power bounds",
+  "simulation_decision_sha256": "1a112a4b53559ad25753729a4ec3cde246c1a490f5be8daafcc0793beffad783",
+  "method_sha256": "19d0705af94a1078975550c79e3d36458c49dd23d07ee6a84d2a1905ab875625",
+  "old_design_modified": false,
+  "empirical_confirmation_authorized_by_this_file": false
+}

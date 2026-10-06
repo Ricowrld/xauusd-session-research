@@ -1,0 +1,23 @@
+{
+  "provider_url": "https://freeserv.dukascopy.com/2.0/index.php?path=common%2Finstruments",
+  "response_sha256": "988460387c130b47ebde05c62f5a4b2229c85842d193e1a235f429a819a4a995",
+  "instrument": "XAU/USD",
+  "raw_fields": {
+    "title": "XAU/USD",
+    "name": "XAU/USD",
+    "description": "Spot gold",
+    "history_start_tick": "1052092863421",
+    "history_start_10sec": "1406309540000",
+    "history_start_60sec": "1052092860000",
+    "history_start_60min": "1052092800000",
+    "history_start_day": "0"
+  },
+  "decoded_utc": {
+    "history_start_tick": "2003-05-05T00:01:03.421000+00:00",
+    "history_start_10sec": "2014-07-25T17:32:20+00:00",
+    "history_start_60sec": "2003-05-05T00:01:00+00:00",
+    "history_start_60min": "2003-05-05T00:00:00+00:00",
+    "history_start_day": "unspecified (zero metadata sentinel)"
+  },
+  "interpretation": "Official advertised history start; not a price coverage audit. No claim from the daily zero sentinel."
+}
