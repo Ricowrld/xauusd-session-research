@@ -1,0 +1,12 @@
+{
+  "passed": 7,
+  "failed": 0,
+  "groups": {
+    "model_coherence_oracle_and_block_variance": 4,
+    "viewed_pilot_measurement_and_causal_issuance": 2,
+    "fail_closed_fresh_price_guard": 1
+  },
+  "market_data_period_used": "2016-2023 already-viewed only; guard fixtures and toy prices are synthetic",
+  "fresh_pre2016_numeric_reads": 0,
+  "holdout_accessed": false
+}

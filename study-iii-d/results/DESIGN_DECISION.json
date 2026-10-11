@@ -1,0 +1,19 @@
+{
+  "status": "Fresh confirmation not authorised: precision/validation or capacity gate fails",
+  "critical_value": 3.0633992738960805,
+  "fixed_pilot_HAR_QLIKE": 0.1491852425173886,
+  "maximum_normalized_full_width": 0.1,
+  "minimum_scored_n": null,
+  "training_n": 400,
+  "available_coverage_only_upper_bound": 1975,
+  "capacity_sufficient": false,
+  "fresh_confirmation_authorized": false,
+  "next_action": "Freeze the prospective failure; retain quarantine and holdout closed",
+  "new_fresh_prices_read": false,
+  "fresh_forecasts_evaluated": false,
+  "holdout_accessed": false,
+  "trades_run": false,
+  "route_a_status": "Administratively open; provider replies pending",
+  "predecessor_files_unchanged": 283,
+  "confidence_scope": "Generator-conditional interval for frozen fitted pair; no distribution-free or universal equal-risk size claim"
+}

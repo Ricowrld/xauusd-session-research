@@ -1,0 +1,20 @@
+{
+  "critical_value": 3.0633992738960805,
+  "independent_validation_opened": false,
+  "calibration_paths_per_cell": 400,
+  "cells": 20,
+  "grid": [
+    1000,
+    1250,
+    1500,
+    1750,
+    1975,
+    2500,
+    3000,
+    4000
+  ],
+  "method": "Maximum higher 97.5% absolute studentized reference-error quantile plus oracle uncertainty",
+  "scope_sha256": "765b7099544dca375f1dd02f1eaf5b34b8794764d2848fc86a818540ef1e59c3",
+  "source_sha256": "91353dca992c503d0e683fe33114c5adab57e9c70fcabae5d9e09d24d2e7c1b5",
+  "elapsed_seconds": 450.9050757884979
+}

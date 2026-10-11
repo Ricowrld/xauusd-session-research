@@ -3,7 +3,7 @@
 Research question: Does current Asian-session realised variance add information
 about subsequent London realised variance beyond a HAR-style volatility baseline?
 
-## Current progress - 6 October 2026
+## Current progress - 11 October 2026
 
 - Study I tested compression, direction and session relationships. Directional and
   compression-to-expansion claims failed; positive volatility persistence emerged.
@@ -32,9 +32,15 @@ about subsequent London realised variance beyond a HAR-style volatility baseline
   spot-data leads remain: Olsen, LSEG Tick History and Tickdatamarket. Their published
   history is promising but exact XAU/USD bid/ask continuity, session coverage,
   provenance, access terms and usable unique-date capacity remain unverified.
-- Provider enquiries are prepared but unsent. Study III-C and Route A evaluated
-  no fresh forecast losses or trading strategies. Pre-2016 numerical outcomes and
-  the final 2024+ holdout remain unevaluated.
+- Olsen and Tickdatamarket received full suitability enquiries on 6 October;
+  LSEG acknowledged an abbreviated sales contact request. Route A remains
+  administratively open, with no qualifying provider inventory received.
+- Study III-D now separately freezes a precision-based candidate using only
+  already-viewed 2016-2023 calibration and coherent simulations. Its fixed interval
+  width, validation and capacity gates determine whether fresh confirmation may
+  proceed; they do not relax III-C. See the new design report and registry.
+- No fresh pre-2016 forecast losses or new trading strategies were evaluated in
+  III-D. Numerical pre-2016 outcomes and the final 2024+ holdout remain closed.
 - All 2024+ data remains locked. No C++ or MT5 EA work is underway.
 
 ## Read the evidence
@@ -58,13 +64,27 @@ The Study III-C and Route A artifacts are now published:
 - [Route A historical-source feasibility report](route-a-source-audit/output/pdf/Route_A_Historical_Gold_Source_Feasibility_Report.pdf)
 - [Route A evidence bundle](route-a-source-audit/output/Route_A_Source_Feasibility_Bundle.zip)
 - [Source availability matrix](route-a-source-audit/results/SOURCE_MATRIX.csv)
-- [Unsent provider enquiry template and priority order](provider-enquiries/README.md)
-- [Research next steps - discussion, not a registered Study III-D](publication-notes/NEXT_RESEARCH_DECISIONS.md)
+- [Provider enquiry status and original template](provider-enquiries/README.md)
+- [Earlier next-step discussion as of 6 October](publication-notes/NEXT_RESEARCH_DECISIONS.md)
 
 These conclusions do not amend prior frozen studies. The Route A README's original
 local-publication-status sentence predates this upload; its source bytes and bundle
 are preserved. The [publication record](publication-notes/2026-10-06_STUDY_III_C_ROUTE_A.md)
 records the uploaded snapshots and exclusions.
+
+
+The separate Study III-D candidate and its simulation decision are available:
+
+**III-D does not authorise fresh confirmation.** No tested sample size passes
+the frozen precision and reference-integration accuracy gates. At 1,975 scored
+dates, the worst-case 80th-percentile full interval width is 43.1% of fixed pilot
+loss, versus the 10% limit. Both failures are preserved without threshold changes.
+
+- [Study III-D design and validation report](study-iii-d/output/pdf/Study_III_D_Precision_Design_and_Validation_Report.pdf)
+- [Frozen III-D registry and authorisation status](study-iii-d/protocol/REGISTRATION.json)
+- [III-D decision and all sample-size gates](study-iii-d/README.md)
+- [III-D research bundle](study-iii-d/output/Study_III_D_Research_Bundle.zip)
+- [Publication and provider-status update](publication-notes/2026-10-11_STUDY_III_D.md)
 
 Earlier immutable deliverables remain available:
 

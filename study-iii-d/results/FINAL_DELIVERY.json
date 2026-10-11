@@ -1,0 +1,17 @@
+{
+  "bundle": "Study_III_D_Research_Bundle.zip",
+  "bundle_sha256": "acaf37e91e5aa7e3983ff5ae611e6facc4bb3d66319ac9bd25cb7c8b21c4255e",
+  "bundle_bytes": 29256298,
+  "members": 80,
+  "pdf": "Study_III_D_Precision_Design_and_Validation_Report.pdf",
+  "pdf_sha256": "3f430e780c4e6335885b88235e73b620cea2961b41619c5d4e290dd34f5960f5",
+  "pdf_pages": 10,
+  "study_iii_d_design_status": "Fresh confirmation not authorised: precision/validation or capacity gate fails",
+  "minimum_scored_n": null,
+  "price_data_included": false,
+  "credential_and_contact_scan_pass": true,
+  "predecessor_files_verified": 283,
+  "fresh_outcomes_evaluated": false,
+  "holdout_accessed": false,
+  "trades_run": false
+}

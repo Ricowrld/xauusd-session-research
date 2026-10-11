@@ -1,0 +1,61 @@
+{
+  "calibration_paths": 8000,
+  "independent_validation_paths": 20000,
+  "independent_reference_paths": 2560,
+  "reference_scored_steps_each": 8192,
+  "training_rows": 400,
+  "scored_grid": [
+    1000,
+    1250,
+    1500,
+    1750,
+    1975,
+    2500,
+    3000,
+    4000
+  ],
+  "scenarios": [
+    [
+      "block5",
+      5,
+      1.0
+    ],
+    [
+      "block10",
+      10,
+      1.0
+    ],
+    [
+      "block20",
+      20,
+      1.0
+    ],
+    [
+      "block40_stress",
+      40,
+      1.0
+    ],
+    [
+      "block20_scale125_stress",
+      20,
+      1.25
+    ]
+  ],
+  "targets": [
+    0.0,
+    0.01,
+    0.05,
+    0.1
+  ],
+  "component_containment_violations": 0,
+  "complete_eligible_steps_simulated": true,
+  "limitations": [
+    "Calendar-time missingness/price-quality exclusions are not a calibrated DGP",
+    "Annual gates use synthetic 252-step bins, not fabricated market calendar years",
+    "No arbitrary regime-break or provider-history transport guarantee",
+    "Conditional risk integral is approximate; its Monte Carlo error is explicitly bracketed"
+  ],
+  "new_price_access": false,
+  "holdout_accessed": false,
+  "elapsed_validation_seconds": 941.0309867858887
+}

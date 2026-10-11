@@ -1,0 +1,13 @@
+{
+  "S0": 0.1491852425173886,
+  "training_rows": 400,
+  "scored_rows": 1504,
+  "first_training": "2016-02-01",
+  "last_training": "2017-09-01",
+  "first_scored": "2017-09-05",
+  "last_scored": "2023-12-29",
+  "full_width_fraction_of_pilot_loss": 0.1,
+  "full_width_raw_qlike": 0.014918524251738861,
+  "interpretation": "Fixed already-viewed pilot HAR mean QLIKE, not fresh baseline loss",
+  "pilot_feature_sha256": "8c2e2e1ce7c07aea0493f6a3a7cbb12617c5c02242b38e374e5d28da40bbc09a"
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "title": "A Simple Approximate Long-Memory Model of Realized Volatility",
+    "authors": "Fulvio Corsi",
+    "year": 2009,
+    "url": "https://academic.oup.com/jfec/article-abstract/7/2/174/856522?login=false",
+    "use": "HAR motivation only; our cross-session HAR includes a prior-day variance control and is not an exact replication of Corsi."
+  },
+  {
+    "title": "Volatility forecast comparison using imperfect volatility proxies",
+    "authors": "Andrew J. Patton",
+    "year": 2011,
+    "url": "https://public.econ.duke.edu/~ap172/Patton_vol_proxies_JoE_2011.pdf",
+    "use": "QLIKE proxy-robust rankings require a conditionally unbiased proxy. Native M5 equivalence does not prove that assumption. MAE is a secondary guardrail, not a proxy-robust variance ranking guarantee."
+  },
+  {
+    "title": "Tests of Conditional Predictive Ability",
+    "authors": "Raffaella Giacomini and Halbert White",
+    "year": 2006,
+    "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1468-0262.2006.00718.x",
+    "use": "Motivation for forecast-method evaluation and estimation uncertainty. Their rolling finite-memory framework is not claimed as a theorem for our one-time frozen fit."
+  },
+  {
+    "title": "Fixed-b Subsampling and Block Bootstrap: Improved Confidence Sets Based on P-value Calibration",
+    "authors": "Xiaofeng Shao and Dimitris N. Politis",
+    "year": 2012,
+    "url": "https://arxiv.org/abs/1204.1035",
+    "use": "Motivation to evaluate block-size-dependent finite-sample coverage, not a claim that our calibrated max-SE interval implements their specific method."
+  },
+  {
+    "title": "Bootstrapping Generalization Error Bounds for Time Series",
+    "authors": "Robert Lunde and Cosma Rohilla Shalizi",
+    "year": 2017,
+    "url": "https://arxiv.org/abs/1711.02834",
+    "use": "Risk inference needs mixing/smoothness assumptions. Our generator validation is conditional evidence, not a proof that all those assumptions hold for XAUUSD."
+  }
+]

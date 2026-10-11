@@ -1,28 +1,26 @@
-# Provider enquiries - prepared, not sent
+# Provider enquiries - dispatch status
 
-These files support the Route A source-feasibility audit. No enquiry has been sent,
-no account or trial has been opened, and no purchase has been made by this project.
+Status as of 11 October 2026. Route A remains administratively open while
+separately registered Study III-D research development proceeds.
 
-The [enquiry template](XAUUSD_Historical_Quote_Enquiry.md) requests instrument-specific
-availability evidence before purchasing or evaluating fresh prices.
+- Olsen: full historical XAU/USD suitability enquiry sent 6 October 2026.
+- Tickdatamarket: full suitability enquiry sent 6 October 2026.
+- LSEG Tick History: sales contact request acknowledged 6 October. Form limits
+  allowed an abbreviated topic; the full checklist needs following up with a
+  responding representative. No trial activation or purchase was requested.
 
-Priority for enquiries:
+A targeted sender-domain mailbox check on 11 October returned no provider replies.
+This is not proof of nondelivery or a provider rejection. No accessible source has
+yet supplied qualifying inventory, provenance or licensing evidence.
 
-1. Olsen: its hosted research documents intraday XAU/USD samples in 1987-1995.
-   Confirm whether the original archive is presently licensable and continuous.
-2. LSEG Tick History: the general archive reaches January 1996, but this is not a
-   guarantee of XAU/USD bid/ask history or sufficient complete sessions.
-3. Tickdatamarket: its XAU-USD listing starts in August 1998. The calendar margin is
-   narrow, so genuine-quote inventories are essential before treating it as feasible.
+The [original enquiry template](XAUUSD_Historical_Quote_Enquiry.md) is preserved as
+an historical preparation record; its "unsent" wording predates actual dispatch.
+No personal sender details, mobile numbers, mailbox IDs or private correspondence
+are published. The frozen [Route A report](../route-a-source-audit/output/pdf/Route_A_Historical_Gold_Source_Feasibility_Report.pdf)
+and [source evidence ledger](../route-a-source-audit/evidence/SOURCES.json) remain
+unchanged. Published envelopes are not verified continuous XAU/USD histories.
 
-Refer to the [source evidence ledger](../route-a-source-audit/evidence/SOURCES.json)
-for primary references and to the [Route A report](../route-a-source-audit/output/pdf/Route_A_Historical_Gold_Source_Feasibility_Report.pdf)
-for the date-capacity calculations and measurement limitations.
-
-Provider replies should be checked against the frozen source-selection scope.
-Multiple brokers observing the same date do not add unique market dates. Public
-results do not establish present-day access, prices or licence rights.
-
-Do not supply or request a current market-price sample or 2024+ outcomes. A proposed
-fresh confirmation must be registered for the actual source, measurement and period
-before outcome evaluation. No new data access is authorised by these documents.
+Further suitability evidence needs exact quote start timestamps, genuine two-sided
+session coverage, timezone/DST, filling/filtering policy, contributor history and
+licence rights. Request pre-2016 timestamp inventories first; any price bridge must
+be restricted to already-viewed 2016-2023. The 2024+ holdout remains separate.

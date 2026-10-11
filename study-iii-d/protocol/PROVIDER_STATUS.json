@@ -1,0 +1,12 @@
+{
+  "as_of_client_date": "2026-10-11",
+  "route_a": "administratively_open",
+  "olsen": "Full suitability enquiry sent 2026-10-06; no qualifying inventory received in the targeted mailbox check",
+  "tickdatamarket": "Full suitability enquiry sent 2026-10-06; no qualifying inventory received in the targeted mailbox check",
+  "lseg": "Sales contact request acknowledged 2026-10-06; abbreviated form topic; full checklist pending a representative response",
+  "mailbox_check": "Targeted sender-domain search after 2026-10-05 returned no received messages from the three provider domains on 2026-10-11; not proof of nondelivery or no future reply",
+  "new_messages_sent_in_iii_d": 0,
+  "fresh_prices_requested_or_acquired_in_iii_d": false,
+  "provider_eligibility_verified": false,
+  "personal_contact_details_published": false
+}
