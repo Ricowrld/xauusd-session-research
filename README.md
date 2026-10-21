@@ -1,89 +1,60 @@
 # Cross-session information transfer in XAUUSD
 
-Research question: Does current Asian-session realised variance add information
-about subsequent London realised variance beyond a HAR-style volatility baseline?
+Research question: Does current Asian-session realised variance add information about subsequent London realised variance beyond a HAR-style volatility baseline?
 
-## Current progress - 6 October 2026
+## Final status of the current research phase - 21 October 2026
 
-- Study I tested compression, direction and session relationships. Directional and
-  compression-to-expansion claims failed; positive volatility persistence emerged.
-- Study II acquired 2,789,384 complete paired OANDA M1 candles for 2016-2023. Asian
-  variance reduced 2022-2023 validation QLIKE forecast loss by 23.9% versus the basic
-  baseline and 20.0% versus HAR. MSE/MAE also improved. These are not trading returns.
-- Study II remains acceptance-inconclusive: 160 development forecasts versus the
-  preregistered 500. It is permanently frozen; no profitable strategy is claimed.
-- The original Study III Design Pack retains its conservative 32,001-score
-  requirement. Its registered 1999-2015 window cannot supply that many unique scored
-  dates; its frozen specification remains unchanged.
-- Study III-B established that native unsmoothed OANDA M5 is conditionally defensible
-  for a new within-feed realised-variance methodology. All 535,892 shared complete-M1
-  blocks matched native bid/ask OHLC and price counts exactly, while native M5 retained
-  additional received bars discarded by the five-of-five M1 reconstruction rule.
-- Study III-C replaced the reduced-form power generator with a coherent additive
-  variance construction. Under the frozen III-C simulation criteria, a 4,000-scored-date
-  design achieved 92.2-94.7% power at the calibrated 5% QLIKE target, and the independent
-  null-validation gate passed. The design basis is conditional simulation evidence,
-  not an empirical forecast result.
-- A timestamp-only OANDA audit found authenticated native-M5 history beginning
-  19 March 2006. After reserving 400 training dates, the pre-2016 fresh-window upper
-  bound is only 1,975 scored dates, so III-C stopped before outcome evaluation.
-- Route A then audited longer historical-source options. No accessible qualifying
-  source has yet been verified to support 4,000 fresh scored dates. Three commercial
-  spot-data leads remain: Olsen, LSEG Tick History and Tickdatamarket. Their published
-  history is promising but exact XAU/USD bid/ask continuity, session coverage,
-  provenance, access terms and usable unique-date capacity remain unverified.
-- Provider enquiries are prepared but unsent. Study III-C and Route A evaluated
-  no fresh forecast losses or trading strategies. Pre-2016 numerical outcomes and
-  the final 2024+ holdout remain unevaluated.
-- All 2024+ data remains locked. No C++ or MT5 EA work is underway.
+The current exploratory, methodology and feasibility phase is complete as a documented research project. Independent empirical confirmation remains unresolved. This editorial conclusion summarises existing published evidence; it does not register a new study, change acceptance rules, rerun analysis or establish a profitable trading strategy.
+
+> Adding current Asian-session realised variance improved London-session variance forecasts relative to basic and HAR-style baselines on the selected OANDA validation sample. Study II remained inconclusive under its preregistered development-sample requirement. Subsequent simulation work supported a conditional confirmation design, but available fresh OANDA historical coverage could not meet its sample requirement. Independent confirmation and trading profitability therefore remain unestablished.
+
+Read the [final research conclusion](publication-notes/2026-10-21_FINAL_RESEARCH_CONCLUSION.md) for the evidence, limitations and conditions for any future continuation. The latest empirical and simulation evidence summarised here was published by 6 October 2026; the finalisation date is not a new experiment date.
+
+## Evidence at a glance
+
+| Phase | Finding | Interpretation |
+| --- | --- | --- |
+| Study I | Directional and compression-to-expansion claims were not supported; positive volatility persistence emerged. The tested trading benchmarks did not establish profitability. | Association motivated a narrower forecasting question, not a validated directional strategy. |
+| Study II | Across 479 validation forecasts in 2022-2023, Asia reduced QLIKE loss by 23.9% against the basic baseline and 20.0% against HAR; MSE and MAE also improved. | Encouraging observed forecast performance, not investment returns. |
+| Study II acceptance | Only 160 development OOS forecasts qualified against 500 required. | Inconclusive under the registered sample-count gate; the study remains frozen. |
+| Study III-B | All 535,892 shared complete-M1 blocks matched native OANDA M5 bid/ask OHLC and price counts. | Conditional support for native M5 within this feed; not automatic equivalence for other providers. |
+| Study III-C simulation | The designated 4,000-score design passed its conditional simulation gates; primary power was 92.2-94.7% at the calibrated 5% target. | Planning evidence under the specified generator, not empirical confirmation. |
+| Study III-C capacity | Fresh pre-2016 OANDA coverage supported at most 1,975 scored dates after 400 training dates. | The designated confirmation was infeasible on this source/window and stopped before outcome evaluation. |
+| Route A | No accessible qualifying longer source had been verified in the published audit. | Source feasibility remains unresolved; this does not prove that no suitable dataset exists. |
+
+The original Study III Design Pack retains its separate 32,001-score requirement. III-C did not retroactively amend it. Pre-2016 forecast outcomes and the final 2024+ holdout remain unevaluated in the published research record. No trading strategy, C++ system or MT5 EA is validated by this project.
 
 ## Read the evidence
 
-`portfolio-edition/README.md` gives the public Study I/II narrative.
-`output/pdf/Gold_Session_Study_II_OANDA_Research_Report.pdf` is the frozen Study II report.
-`study-iii-design/` contains the original coverage investigation, power calculations
-and registered confirmation specification.
-
-The completed Study III-B reports are available here:
-
-- [Native M5 equivalence and coverage](study-iii-b/output/pdf/Study_III_B_Native_M5_Equivalence_Coverage_Report.pdf)
-- [Full-procedure power analysis](study-iii-b/output/pdf/Study_III_B_Full_Procedure_Power_Report.pdf)
-- [Research bundle](study-iii-b/output/Study_III_B_Research_Bundle.zip)
-
-The Study III-C and Route A artifacts are now published:
-
+- [Study I/II portfolio narrative](portfolio-edition/README.md)
+- [Study II methodology and coverage explanation](gold-session-study-ii/README.md)
+- [Frozen Study II report](output/pdf/Gold_Session_Study_II_OANDA_Research_Report.pdf)
+- [Study II numerical forecast comparisons](gold-session-study-ii/results/oanda/forecast_comparison.json)
+- [Original Study III Design Pack](output/pdf/Study_III_Design_Pack.pdf)
+- [Native M5 equivalence and coverage report](study-iii-b/output/pdf/Study_III_B_Native_M5_Equivalence_Coverage_Report.pdf)
+- [Study III-B full-procedure power report](study-iii-b/output/pdf/Study_III_B_Full_Procedure_Power_Report.pdf)
+- [Study III-B research bundle](study-iii-b/output/Study_III_B_Research_Bundle.zip)
 - [Study III-C coherent power and historical capacity report](study-iii-c/output/pdf/Study_III_C_Coherent_Power_and_Historical_Capacity_Report.pdf)
-- [Study III-C research bundle](study-iii-c/output/Study_III_C_Research_Bundle.zip)
 - [Study III-C methodology and reproduction](study-iii-c/README.md)
+- [Study III-C research bundle](study-iii-c/output/Study_III_C_Research_Bundle.zip)
 - [Route A historical-source feasibility report](route-a-source-audit/output/pdf/Route_A_Historical_Gold_Source_Feasibility_Report.pdf)
 - [Route A evidence bundle](route-a-source-audit/output/Route_A_Source_Feasibility_Bundle.zip)
 - [Source availability matrix](route-a-source-audit/results/SOURCE_MATRIX.csv)
-- [Unsent provider enquiry template and priority order](provider-enquiries/README.md)
-- [Research next steps - discussion, not a registered Study III-D](publication-notes/NEXT_RESEARCH_DECISIONS.md)
-
-These conclusions do not amend prior frozen studies. The Route A README's original
-local-publication-status sentence predates this upload; its source bytes and bundle
-are preserved. The [publication record](publication-notes/2026-10-06_STUDY_III_C_ROUTE_A.md)
-records the uploaded snapshots and exclusions.
-
-Earlier immutable deliverables remain available:
-
-- [Original Study III Design Pack](output/pdf/Study_III_Design_Pack.pdf)
+- [Prepared provider enquiries](provider-enquiries/README.md)
+- [Possible future research decisions - discussion only](publication-notes/NEXT_RESEARCH_DECISIONS.md)
+- [6 October publication record](publication-notes/2026-10-06_STUDY_III_C_ROUTE_A.md)
 - [Study II permanent freeze records](research-archive/Gold-Session-Study-II/PERMANENT_FREEZE.json)
 
-## Reproducibility and privacy
+## Reading historical documents
 
-The code, protocols, derived ledgers and checksum records are included. Provider
-raw responses, cached market-data files, API keys, account credentials and synced
-reference documents are excluded. Use your own provider access to reproduce
-acquisition; later revised source data is not assumed bit-identical.
+Earlier README statements that no formal power calculation had yet been completed describe their publication stage. Later III-C simulation-based power planning is documented separately and does not alter the frozen Study II decision. The Route A README's original local-publication-status sentence predates its upload; the publication record explains the preserved snapshot.
 
-Research dates, clocks and acceptance rules are frozen within each study. Missing
-prices are never fabricated. Viewed periods are not relabelled as fresh evidence and
-multiple brokers observing the same date are not counted as additional independent
-market dates.
+## Reproducibility, preservation and privacy
 
-`PROGRESS_MANIFEST.json` records published file hashes and source commits.
+The code, protocols, derived ledgers and checksum records are included. Raw provider responses, cached market data, API keys, account credentials and synced reference documents are excluded. Reproduction requires your own provider access; revised provider data is not assumed bit-identical.
 
-Research and implementation assistance: Codex. This is exploratory research,
-not a live trading system or a claim of investment profitability.
+Frozen studies, protocols, results, reports, bundles and historical checksum records are unchanged by this editorial finalisation. `PROGRESS_MANIFEST.json` remains the historical publication manifest, not a newly regenerated integrity record for these editorial changes.
+
+Missing prices are not fabricated. Viewed periods are not relabelled as fresh evidence. Multiple brokers observing the same date are not counted as additional independent market dates. Any continuation requires its own prospective design and appropriate data access; this finalisation does not authorise opening the holdout.
+
+Research and implementation assistance: Codex. Final editorial synthesis assistance: Perplexity. This is research, not a live trading system or a claim of investment profitability.
