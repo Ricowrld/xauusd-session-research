@@ -4,7 +4,7 @@ Research question: Does current Asian-session realised variance add information 
 
 ## Final status of the current research phase - 21 October 2026
 
-The current exploratory, methodology and feasibility phase is complete as a documented research project. Independent empirical confirmation remains unresolved. This editorial conclusion summarises existing published evidence; it does not register a new study, change acceptance rules, rerun analysis or establish a profitable trading strategy.
+The current exploratory, methodology and feasibility phase is complete as a documented research project. Independent empirical confirmation remains unresolved. A separate III-D precision-design candidate also failed its prospective feasibility gates; its records remain on the `codex/study-iii-d` branch rather than in `main`. This editorial conclusion summarises existing published evidence; it does not register a new study, change acceptance rules, rerun analysis or establish a profitable trading strategy.
 
 > Adding current Asian-session realised variance improved London-session variance forecasts relative to basic and HAR-style baselines on the selected OANDA validation sample. Study II remained inconclusive under its preregistered development-sample requirement. Subsequent simulation work supported a conditional confirmation design, but available fresh OANDA historical coverage could not meet its sample requirement. Independent confirmation and trading profitability therefore remain unestablished.
 
@@ -21,8 +21,9 @@ Read the [final research conclusion](publication-notes/2026-10-21_FINAL_RESEARCH
 | Study III-C simulation | The designated 4,000-score design passed its conditional simulation gates; primary power was 92.2-94.7% at the calibrated 5% target. | Planning evidence under the specified generator, not empirical confirmation. |
 | Study III-C capacity | Fresh pre-2016 OANDA coverage supported at most 1,975 scored dates after 400 training dates. | The designated confirmation was infeasible on this source/window and stopped before outcome evaluation. |
 | Route A | No accessible qualifying longer source had been verified in the published audit. | Source feasibility remains unresolved; this does not prove that no suitable dataset exists. |
+| Study III-D (separate branch) | A precision-based candidate tested 1,000–4,000 scored dates. At the 1,975-date OANDA ceiling, its worst 80th-percentile full interval width was 43.1% of fixed pilot HAR QLIKE, versus a 10% limit; reference-integration accuracy was about 0.272 versus a 0.20 limit. No tested size passed all gates. | Fresh confirmation was not authorised; this is a simulation/design-feasibility finding, not a fresh-data rejection or a change to III-C. |
 
-The original Study III Design Pack retains its separate 32,001-score requirement. III-C did not retroactively amend it. Pre-2016 forecast outcomes and the final 2024+ holdout remain unevaluated in the published research record. No trading strategy, C++ system or MT5 EA is validated by this project.
+The III-D feasibility record is linked from its separate branch, not copied into this branch or represented as an independent empirical test. The original Study III Design Pack retains its separate 32,001-score requirement. III-C did not retroactively amend it. Pre-2016 forecast outcomes and the final 2024+ holdout remain unevaluated in the published research record. No trading strategy, C++ system or MT5 EA is validated by this project.
 
 ## Read the evidence
 
@@ -41,7 +42,9 @@ The original Study III Design Pack retains its separate 32,001-score requirement
 - [Route A evidence bundle](route-a-source-audit/output/Route_A_Source_Feasibility_Bundle.zip)
 - [Source availability matrix](route-a-source-audit/results/SOURCE_MATRIX.csv)
 - [Prepared provider enquiries](provider-enquiries/README.md)
-- [Possible future research decisions - discussion only](publication-notes/NEXT_RESEARCH_DECISIONS.md)
+- [Possible future research decisions - historical 6 October discussion](publication-notes/NEXT_RESEARCH_DECISIONS.md)
+- [Study III-D frozen prospective decision (separate research branch)](https://github.com/Ricowrld/xauusd-session-research/blob/codex/study-iii-d/study-iii-d/results/DESIGN_DECISION.json)
+- [Study III-D interpretation (separate research branch)](https://github.com/Ricowrld/xauusd-session-research/blob/codex/study-iii-d/study-iii-d/results/INTERPRETATION.md)
 - [6 October publication record](publication-notes/2026-10-06_STUDY_III_C_ROUTE_A.md)
 - [Study II permanent freeze records](research-archive/Gold-Session-Study-II/PERMANENT_FREEZE.json)
 
