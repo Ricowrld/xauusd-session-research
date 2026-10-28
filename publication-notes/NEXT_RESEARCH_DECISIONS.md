@@ -1,6 +1,6 @@
-# Research next steps - discussion only
+# Research next steps - historical discussion (6 October 2026)
 
-Status as of 6 October 2026: Route A remains open pending provider evidence and
+Historical status as of 6 October 2026 (not the latest research decision): Route A remains open pending provider evidence and
 access. No suitable accessible source has been verified. This targeted search does
 not prove that no suitable dataset exists.
 
@@ -16,7 +16,11 @@ Earlier-than-1999 history extends the original Design Pack's period. Another fee
 does not automatically inherit OANDA's native-M5 equivalence or III-C's conditional
 simulation calibration. Study III-C's files and gates remain unchanged.
 
-## Proposed Study III-D, only if a separate design is pursued
+## Study III-D historical proposal and later outcome
+
+The text below records the **6 October proposal** and must not be read as the current state. The separate `codex/study-iii-d` branch subsequently registered a precision candidate and completed simulation validation. No sample size in its frozen 1,000–4,000 grid passed every gate. Its 1,975-date worst 80th-percentile interval width was 43.1% of fixed pilot HAR QLIKE versus the 10% ceiling; its numerical reference-integration ratio was about 0.272 versus 0.20. Fresh confirmation was not authorised and no fresh outcome or final holdout was evaluated. [Frozen decision](https://github.com/Ricowrld/xauusd-session-research/blob/codex/study-iii-d/study-iii-d/results/DESIGN_DECISION.json).
+
+### Original proposed Study III-D (historical, superseded by the separate frozen feasibility result)
 
 A precision-based confirmation is an alternative inferential objective for the same
 incremental-information question. It is not registered or implemented. The proposed
