@@ -6,7 +6,7 @@ Scope: editorial synthesis of existing published research, with evidence publish
 
 ## Conclusion
 
-Adding current Asian-session realised variance improved London-session variance forecasts relative to basic and HAR-style baselines on the selected OANDA validation sample. Study II remained inconclusive under its preregistered development-sample requirement. Subsequent simulation work supported a conditional confirmation design, but available fresh OANDA historical coverage could not meet its sample requirement. Independent confirmation and trading profitability therefore remain unestablished.
+Adding current Asian-session realised variance improved London-session variance forecasts relative to basic and HAR-style baselines on the selected OANDA validation sample. Study II remained inconclusive under its preregistered development-sample requirement. Subsequent III-C simulations supported a conditional confirmation design, but available fresh OANDA historical coverage could not meet its sample requirement. A separate III-D precision-design candidate later failed its frozen prospective feasibility gates without evaluating new market outcomes. Independent confirmation and trading profitability therefore remain unestablished.
 
 The evidence supports a promising forecasting hypothesis for further testing, not an accepted independent confirmation, a causal claim or a profitable strategy.
 
@@ -46,6 +46,19 @@ The original Design Pack's separate 32,001-score requirement remains unchanged.
 
 Sources: [III-C summary](../study-iii-c/README.md), [frozen method](../study-iii-c/preregistration/METHOD.md), [simulation implementation](../study-iii-c/src/power.py).
 
+### Separate Study III-D: prospective precision candidate failed feasibility checks
+
+The separate `codex/study-iii-d` branch records a precision-based design and independent simulation validation. It has **not** been merged into this finalisation, and its results are cited as a separate preserved research snapshot.
+
+- No candidate in the frozen 1,000–4,000 scored-date grid passed all required gates; the selected minimum sample size was null.
+- At OANDA's 1,975-date coverage-only ceiling (after 400 training dates), the worst 80th-percentile full interval width was 0.430972 times fixed pilot HAR mean QLIKE, versus the fixed 0.10 ceiling. These are not confidence intervals for a percentage trading return.
+- The worst reference-integration numerical accuracy ratio was 0.271749 against the 0.20 ceiling; passing coverage and other diagnostic gates did not override these failures.
+- The decision explicitly withheld authorisation for fresh empirical confirmation. No new fresh prices, forecasts, trades or 2024+ holdout outcomes were evaluated.
+
+This is a failed **prospective feasibility design**, not a rejected forecasting hypothesis, an independently confirmed effect, or a claim that all future confirmation approaches are impossible. III-D does not amend the original Study III Design Pack or the frozen III-C gate.
+
+Evidence: [III-D frozen decision](https://github.com/Ricowrld/xauusd-session-research/blob/codex/study-iii-d/study-iii-d/results/DESIGN_DECISION.json), [III-D interpretation](https://github.com/Ricowrld/xauusd-session-research/blob/codex/study-iii-d/study-iii-d/results/INTERPRETATION.md), [publication record](https://github.com/Ricowrld/xauusd-session-research/blob/codex/study-iii-d/publication-notes/2026-10-11_STUDY_III_D.md).
+
 ## Limits on the conclusion
 
 - Inference concerns the selected eligible dates, provider feeds, session definitions and models tested; incomplete coverage limits generalisation.
@@ -59,10 +72,10 @@ Sources: [Study I/II limitations](../portfolio-edition/README.md), [Study II lim
 
 ## Conditions for future continuation
 
-No continuation is registered or implemented by this document. The existing discussion note identifies two possibilities:
+No new continuation is registered or implemented by this document. The separate III-D candidate has already been registered and evaluated for feasibility, and its prospective gates failed; the following historical discussion is not permission to rerun it with relaxed thresholds. The existing discussion note identifies two possibilities:
 
 1. Verify a longer historical source before purchase and outcome evaluation. Check exact instruments, provenance, two-sided quote continuity, clocks, session coverage, access terms and usable unique dates. Use already-viewed periods for a measurement bridge. A new feed requires source-specific registration and cannot automatically inherit OANDA equivalence or III-C calibration.
-2. Separately register a precision-based or other defensible design before viewing fresh outcomes. Freeze the sample-size/precision objective, measurement rules, dependence treatment, acceptance conditions and evaluation schedule. Ordinary fixed-sample intervals must not be repeatedly inspected as an unvalidated sequential stopping rule.
+2. For any genuinely new precision-based or other defensible design, separately register it before viewing fresh outcomes; III-D has already been attempted and cannot be treated as an untested proposal. Freeze the sample-size/precision objective, measurement rules, dependence treatment, acceptance conditions and evaluation schedule. Ordinary fixed-sample intervals must not be repeatedly inspected as an unvalidated sequential stopping rule.
 
 Route A's published audit did not verify an accessible qualifying source. It did not prove that no suitable source exists. Prepared enquiries are not evidence of provider access or confirmed coverage.
 
@@ -72,7 +85,7 @@ Source: [next research decisions, discussion only](NEXT_RESEARCH_DECISIONS.md).
 
 ## Publication and preservation record
 
-This finalisation changes only the root README and adds this conclusion. It leaves frozen code, registrations, results, reports, bundles and historical checksum records untouched. No tests or research pipelines were rerun for this editorial synthesis. `PROGRESS_MANIFEST.json` remains a historical record and is not represented as a regenerated manifest covering this update.
+The original 21 October finalisation changed only the root README and added this conclusion. This 28 October editorial follow-up updates the public narrative to reference the separately preserved III-D branch; it does not modify frozen datasets, study records, acceptance rules or outcomes. It leaves frozen code, registrations, results, reports, bundles and historical checksum records untouched. No tests or research pipelines were rerun for this editorial synthesis. `PROGRESS_MANIFEST.json` remains a historical record and is not represented as a regenerated manifest covering this update.
 
 Earlier statements that power calculations had not yet been completed describe the earlier publication stage; later III-C work is separate. The main README now provides this chronological clarification without modifying frozen study documents.
 
